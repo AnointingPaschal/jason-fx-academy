@@ -74,3 +74,43 @@ The Pages Function in `functions/api/lead.js` still needs the Gmail
 variables in Cloudflare Pages > Settings > Variables — see
 `GMAIL_SETUP.md`. Add those after the first deployment, then redeploy
 (push any change, or Run workflow again).
+
+## Note: the workflow file itself
+
+GitHub's API blocks pushing `.github/workflows/` files with the token
+Muse uses (it needs the `workflow` scope), so the workflow file was
+not pushed automatically. Create it by hand in the GitHub web UI —
+it takes 2 minutes:
+
+1. Go to https://github.com/AnointingPaschal/jason-fx-academy/new/main
+2. In the filename box, type `.github/workflows/deploy.yml`
+3. Paste the contents of `.github/workflows/deploy.yml` from your
+   local copy (also shown below), then **Commit changes**.
+4. Then add the two secrets above and run the workflow.
+
+```yaml
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy . --project-name=jason-fx-academy --commit-dirty=true
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+```
