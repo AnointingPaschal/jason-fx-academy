@@ -1,0 +1,5 @@
+{
+  "name": "jason-fx-academy/lead-smtp",
+  "description": "Classic Gmail SMTP lead endpoint (PHP hosts only, not Cloudflare Pages)",
+  "require": { "phpmailer/phpmailer": "^6.9" }
+}
