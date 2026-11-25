@@ -54,6 +54,7 @@ export async function onRequestPost(context) {
   const name = String(body.name || '').trim();
   const email = String(body.email || '').trim();
   const whatsapp = String(body.whatsapp || '').trim();
+  const telegram = String(body.telegram || '').trim();
   const experience = String(body.experience || '').trim();
   const market = String(body.market || '').trim();
   const country = String(body.country || '').trim();
@@ -84,6 +85,7 @@ export async function onRequestPost(context) {
     `Name: ${name}`,
     `Email: ${email}`,
     `WhatsApp: ${whatsapp || '—'}`,
+    `Telegram: ${telegram || '—'}`,
     `Experience: ${experience || '—'}`,
     `Wants to trade: ${market || '—'}`,
     `Country: ${country || '—'}`,
@@ -99,6 +101,7 @@ export async function onRequestPost(context) {
       <tr><td><strong>Name</strong></td><td>${escapeHtml(name)}</td></tr>
       <tr><td><strong>Email</strong></td><td><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></td></tr>
       <tr><td><strong>WhatsApp</strong></td><td>${escapeHtml(whatsapp || '—')}</td></tr>
+      <tr><td><strong>Telegram</strong></td><td>${escapeHtml(telegram || '—')}</td></tr>
       <tr><td><strong>Experience</strong></td><td>${escapeHtml(experience || '—')}</td></tr>
       <tr><td><strong>Wants to trade</strong></td><td>${escapeHtml(market || '—')}</td></tr>
       <tr><td><strong>Country</strong></td><td>${escapeHtml(country || '—')}</td></tr>
