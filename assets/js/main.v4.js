@@ -75,67 +75,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Lead form — native POST to FormSubmit (no AJAX fetch).
+  // The AJAX endpoint timed out and left the button stuck on
+  // "Sending your details…", so the form now submits normally:
+  // the browser posts to FormSubmit and lands on thank-you.html.
   const form = document.getElementById('leadForm');
   if (!form) return;
-  const success = document.getElementById('formSuccess');
   const errorBox = document.getElementById('formError');
   const submitBtn = document.getElementById('submitBtn');
-  const successName = document.getElementById('successName');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    errorBox.style.display = 'none';
-    success.style.display = 'none';
-    const data = {
-      name: form.name.value.trim(),
-      email: form.email.value.trim(),
-      whatsapp: form.whatsapp.value.trim(),
-      experience: form.experience.value,
-      market: form.market.value,
-      country: form.country.value.trim(),
-      source: 'jasonfxacademy.com — Wick Theory landing page',
-      website: form.website ? form.website.value : ''
-    };
-    if (!data.name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+  form.addEventListener('submit', (e) => {
+    const name = (form.name.value || '').trim();
+    const email = (form.email.value || '').trim();
+    if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      e.preventDefault();
       errorBox.textContent = 'Please add your full name and a valid email address.';
       errorBox.style.display = 'block';
       return;
     }
+    errorBox.style.display = 'none';
     submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="bi bi-arrow-repeat"></i> Sending your details…';
-    try {
-      // FormSubmit: no signup, no OAuth. First submission triggers an
-      // activation email to onespiritgate@gmail.com — click it once and
-      // every lead after that lands in that inbox.
-      const res = await fetch('https://formsubmit.co/ajax/onespiritgate@gmail.com', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          WhatsApp: data.whatsapp,
-          Experience: data.experience,
-          'Wants to trade': data.market,
-          Country: data.country,
-          Source: data.source,
-          _replyto: data.email,
-          _subject: 'New Jason FX Academy lead — ' + data.name,
-          _template: 'table',
-          _captcha: 'false',
-          _honey: data.website || ''
-        })
-      });
-      const out = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(out.message || out.error || 'The form could not be sent.');
-      if (successName) successName.textContent = data.name.split(' ')[0];
-      form.style.display = 'none';
-      success.style.display = 'block';
-      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    } catch (err) {
-      errorBox.innerHTML = '<strong>Your details were not sent yet.</strong><br>' + (err.message || 'Please try again in a moment.');
-      errorBox.style.display = 'block';
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = '<i class="bi bi-send"></i> Claim my free place';
-    }
+    submitBtn.innerHTML = '<i class="bi bi-arrow-repeat"></i> Vetting you a spot…';
+    // Let the browser submit the form normally to FormSubmit,
+    // which redirects to thank-you.html.
   });
 });
