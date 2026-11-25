@@ -108,7 +108,7 @@ export async function onRequestPost(context) {
         </div>
         <p style="text-align:center;font-size:12px;color:#98a2b3;margin:16px 0 0">WhatsApp: ${escapeHtml(whatsapp || 'not given')} &nbsp;|&nbsp; Telegram: ${escapeHtml(telegram || 'not given')}</p>
       </div>
-      <div style="background:#f9fafb;padding:14px 24px;text-align:center;font-size:11px;color:#98a2b3;border-top:1px solid #eaecf0">Jason FX Academy &bull; jasonfxacademy.com &bull; Trading involves risk. No guaranteed profits.</div>
+      <div style="background:#f9fafb;padding:14px 24px;text-align:center;font-size:11px;color:#98a2b3;border-top:1px solid #eaecf0">Jason FX Academy &bull; jasonfxacademy.com &bull; Trading involves risk.</div>
     </div>
   </div>`;
 
