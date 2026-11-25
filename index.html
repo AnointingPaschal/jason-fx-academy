@@ -4,25 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jason FX Academy — Learn the Wick Theory</title>
-<meta name="description" content="Jason FX Academy teaches the Wick Theory in plain language: bodies are retail, wicks are institutions. Join the free live room and learn to read what the wicks leave behind.">
-<meta property="og:title" content="Jason FX Academy — The Wick Theory">
-<meta property="og:description" content="Trading is just you versus you. You versus the charts.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="assets/img/poster.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23071022'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='32' font-weight='bold' fill='%23c9a227' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Jason FX Academy teaches the Wick Theory: bodies are retail, wicks are institutions. Join the free live room.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101828'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='32' font-weight='bold' fill='%23d9a441' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.v4.css?v=4">
 </head>
 <body>
 
 <header class="topbar">
-  <div class="container">
+  <div class="wrap">
     <a class="brand" href="#top">
       <span class="brand-mark"><i class="bi bi-candlestick"></i></span>
-      <span class="brand-text">Jason FX Academy</span>
+      <span class="brand-name">Jason <span>FX</span> Academy</span>
     </a>
     <nav class="nav-links">
       <a href="#video">Video</a>
@@ -31,35 +27,32 @@
       <a href="#live-room">Live Room</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <div class="nav-cta">
-      <span class="pill live-pill"><span class="live-dot"></span> Live daily</span>
-      <a class="btn btn-gold nav-join" href="#join">Join free</a>
+    <div class="top-actions">
+      <span class="dot" aria-hidden="true"></span>
+      <a class="btn btn-gold top-join" href="#join">Join free</a>
     </div>
   </div>
 </header>
 
 <main id="top">
 
-<!-- MINI HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="container hero-grid">
+  <div class="wrap hero-grid">
     <div class="fade-up">
-      <span class="pill gold"><i class="bi bi-play-circle"></i> The Wick Theory</span>
-      <h1>Trading is just you versus you.<br><span class="gold-text">You versus the charts.</span></h1>
+      <span class="pill"><i class="bi bi-play-circle"></i> The Wick Theory</span>
+      <h1>Trading is just you versus you. <em>You versus the charts.</em></h1>
       <p class="lead">Most traders read the wrong part of the candle. Learn to read the wick — where institutions leave their footprint — and trade it live, with discipline.</p>
       <div class="hero-actions">
-        <a class="btn btn-blue shine" href="#join"><i class="bi bi-person-plus"></i> Claim my free place</a>
+        <a class="btn btn-blue" href="#join"><i class="bi bi-person-plus"></i> Claim my free place</a>
         <a class="btn btn-ghost" href="#video"><i class="bi bi-play-fill"></i> Watch — 1:40</a>
       </div>
-      <div class="hero-stats">
-        <div><b><span class="count" data-count="3">0</span>%</b><span>make it to Division I basketball</span></div>
-        <div><b><span class="count" data-count="10">0</span>%</b><span>become profitable traders</span></div>
-        <div><b>1</b><span>method, taught step by step</span></div>
+      <div class="stats">
+        <div class="stat"><span class="stat-num"><span class="count" data-count="3">3</span>%</span><span class="stat-label">make it to Division I basketball</span></div>
+        <div class="stat"><span class="stat-num"><span class="count" data-count="10">10</span>%</span><span class="stat-label">become profitable traders</span></div>
+        <div class="stat"><span class="stat-num">1</span><span class="stat-label">method, taught step by step</span></div>
       </div>
     </div>
-    <div class="hero-video-wrap fade-up" id="video">
-      <div class="float-chip chip-a"><b>$10,000</b>live P&amp;L moment</div>
+    <div class="fade-up" id="video">
       <div class="video-card">
         <video controls preload="metadata" poster="assets/img/poster.jpg" playsinline>
           <source src="assets/video/wick-theory.mp4" type="video/mp4">
@@ -71,68 +64,57 @@
   </div>
 </section>
 
-<div class="ticker"><div class="ticker-track"><span>Forex</span>•<span>Gold — XAUUSD</span>•<span>Indices</span>•<span>EURUSD</span>•<span>GBPUSD</span>•<span>Risk first</span>•<span>Live every market day</span>•<span>The Wick Room</span>•<span>Forex</span>•<span>Gold — XAUUSD</span>•<span>Indices</span>•<span>EURUSD</span>•<span>GBPUSD</span>•<span>Risk first</span>•<span>Live every market day</span>•<span>The Wick Room</span></div></div>
+<div class="ticker"><div class="ticker-track"><span>Forex</span>•<span>Gold — XAUUSD</span>•<span>Indices</span>•<span>EURUSD</span>•<span>GBPUSD</span>•<span>Risk first</span>•<span>Live daily</span>•<span>The Wick Room</span>•<span>Forex</span>•<span>Gold — XAUUSD</span>•<span>Indices</span>•<span>EURUSD</span>•<span>GBPUSD</span>•<span>Risk first</span>•<span>Live daily</span>•<span>The Wick Room</span></div></div>
 
 <div class="tv-tape">
   <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div>
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-  {"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"US 100"},{"proName":"FX_IDC:EURUSD","title":"EUR/USD"},{"proName":"FX_IDC:GBPUSD","title":"GBP/USD"},{"proName":"OANDA:XAUUSD","title":"Gold"},{"proName":"BITSTAMP:BTCUSD","title":"Bitcoin"},{"proName":"BITSTAMP:ETHUSD","title":"Ethereum"}],"showSymbolLogo":true,"isTransparent":true,"displayMode":"adaptive","colorTheme":"dark","locale":"en"}
+  {"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"US 100"},{"proName":"FX_IDC:EURUSD","title":"EUR/USD"},{"proName":"FX_IDC:GBPUSD","title":"GBP/USD"},{"proName":"OANDA:XAUUSD","title":"Gold"},{"proName":"BITSTAMP:BTCUSD","title":"Bitcoin"},{"proName":"BITSTAMP:ETHUSD","title":"Ethereum"}],"showSymbolLogo":true,"isTransparent":true,"displayMode":"adaptive","colorTheme":"light","locale":"en"}
   </script></div>
 </div>
 
-<!-- STORY -->
 <section class="story reveal">
-  <div class="container story-grid">
-    <div>
-      <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1000&q=80" alt="Live trading charts" loading="lazy" class="story-img">
-    </div>
+  <div class="wrap story-grid">
+    <div><img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1000&q=80" alt="Live trading charts" loading="lazy" class="story-img"></div>
     <div>
       <p class="eyebrow">The story</p>
       <h2>He gave up a basketball scholarship to trade — and failed for two years.</h2>
       <p class="lead">Then he stopped chasing every candle, and started reading the wicks.</p>
       <blockquote class="quote">“Let me tell you how lucky I am. I created my own luck.”<cite>— Dovydas</cite></blockquote>
-      <a class="btn btn-dark" href="#join"><i class="bi bi-arrow-right"></i> Learn the method free</a>
+      <a class="btn btn-blue" href="#join"><i class="bi bi-arrow-right"></i> Learn the method free</a>
     </div>
   </div>
 </section>
 
-<!-- WICK THEORY -->
 <section class="wick reveal" id="wick-theory">
-  <div class="container">
-    <p class="eyebrow gold">The Wick Theory</p>
-    <h2>Bodies are retail.<br>Wicks are institutions.</h2>
-    <p class="lead">The body shows where retail traders pushed price. The wick shows where bigger money stepped in — and left a clue.</p>
-    <div class="grid-3">
-      <div class="wick-card"><span class="wick-num">STEP 01</span><div class="icon-box"><i class="bi bi-bar-chart"></i></div><h3>Read the body</h3><p>The body tells you the crowd's story. Useful — but not where the edge lives.</p></div>
-      <div class="wick-card"><span class="wick-num">STEP 02</span><div class="icon-box gold"><i class="bi bi-lightbulb"></i></div><h3>Follow the wick</h3><p>A long wick is a rejection, a sweep, a footprint. Institutions cannot hide size.</p></div>
-      <div class="wick-card"><span class="wick-num">STEP 03</span><div class="icon-box dark" style="background:#c9a227;color:#111"><i class="bi bi-crosshair"></i></div><h3>Trade the clue</h3><p>Wait for the clue, define your risk, then take the trade — or walk away.</p></div>
-    </div>
-    <div class="candle-diagram">
-      <div>
-        <h3 style="color:#fff;margin-top:0">The wicks leave clues.</h3>
-        <p style="color:#b9c7dd">Price sweeps a level, leaves a long wick, then moves. Learn to spot that sweep, confirm it, and manage the trade — instead of chasing price after it has moved.</p>
+  <div class="wrap">
+    <div class="wick-inner">
+      <p class="eyebrow" style="color:#f0d47a">The Wick Theory</p>
+      <h2>Bodies are retail.<br>Wicks are institutions.</h2>
+      <p class="lead">The body shows where retail traders pushed price. The wick shows where bigger money stepped in — and left a clue.</p>
+      <div class="wick-cards">
+        <div class="wick-card"><span class="wick-step">STEP 01</span><div class="icon-dot" style="margin-top:8px"><i class="bi bi-bar-chart"></i></div><h3>Read the body</h3><p>The body tells you the crowd's story. Useful — but not where the edge lives.</p></div>
+        <div class="wick-card"><span class="wick-step">STEP 02</span><div class="icon-dot" style="margin-top:8px"><i class="bi bi-lightbulb"></i></div><h3>Follow the wick</h3><p>A long wick is a rejection, a sweep, a footprint. Institutions cannot hide size.</p></div>
+        <div class="wick-card"><span class="wick-step">STEP 03</span><div class="icon-dot" style="margin-top:8px"><i class="bi bi-crosshair"></i></div><h3>Trade the clue</h3><p>Wait for the clue, define your risk, then take the trade — or walk away.</p></div>
       </div>
-      <div>
-        <div class="candles" aria-hidden="true">
-          <div class="candle down"><div class="wick-line" style="height:20px"></div><div class="candle-body" style="height:44px"></div><div class="wick-line" style="height:12px"></div></div>
-          <div class="candle up"><div class="wick-line" style="height:10px"></div><div class="candle-body" style="height:56px"></div><div class="wick-line gold" style="height:30px"></div></div>
-          <div class="candle down"><div class="wick-line" style="height:16px"></div><div class="candle-body" style="height:36px"></div><div class="wick-line" style="height:10px"></div></div>
-          <div class="candle up"><div class="wick-line gold" style="height:34px"></div><div class="candle-body" style="height:64px"></div><div class="wick-line" style="height:10px"></div></div>
-          <div class="candle up"><div class="wick-line" style="height:8px"></div><div class="candle-body" style="height:76px"></div><div class="wick-line gold" style="height:26px"></div></div>
-        </div>
-        <p class="small" style="color:#9fb4d8;margin-top:8px">Gold wicks — where institutions left a footprint.</p>
+      <div class="candles" aria-hidden="true">
+        <div class="candle down"><div class="wick-line" style="height:18px"></div><div class="candle-body" style="height:40px"></div><div class="wick-line" style="height:10px"></div></div>
+        <div class="candle up"><div class="wick-line" style="height:10px"></div><div class="candle-body" style="height:52px"></div><div class="wick-line gold" style="height:28px"></div></div>
+        <div class="candle down"><div class="wick-line" style="height:14px"></div><div class="candle-body" style="height:34px"></div><div class="wick-line" style="height:8px"></div></div>
+        <div class="candle up"><div class="wick-line gold" style="height:30px"></div><div class="candle-body" style="height:60px"></div><div class="wick-line" style="height:10px"></div></div>
+        <div class="candle up"><div class="wick-line" style="height:8px"></div><div class="candle-body" style="height:70px"></div><div class="wick-line gold" style="height:24px"></div></div>
       </div>
+      <p class="small" style="color:#98a2b3;margin-top:8px">Gold wicks — where institutions left a footprint.</p>
     </div>
   </div>
 </section>
 
-<!-- LEARN -->
 <section id="learn" class="reveal">
-  <div class="container">
+  <div class="wrap">
     <p class="eyebrow">What you learn</p>
     <h2>Six modules. One method.</h2>
     <p class="lead">Live practice in the room, on real charts — Forex, gold (XAUUSD) and indices.</p>
-    <div style="margin-top:22px">
+    <div style="margin-top:16px">
       <div class="module"><span class="module-num">01</span><div><h3>Market structure, in plain English</h3><p>Trend, range, support and resistance — how price actually moves.</p></div><span class="tag">Foundation</span></div>
       <div class="module"><span class="module-num">02</span><div><h3>The Wick Theory, step by step</h3><p>Bodies vs. wicks, sweeps, liquidity, and the clues to look for before entering.</p></div><span class="tag">Core method</span></div>
       <div class="module"><span class="module-num">03</span><div><h3>Entries, stops and targets</h3><p>Where to enter, where you are wrong, and where to take profit — written down first.</p></div><span class="tag">Execution</span></div>
@@ -143,51 +125,46 @@
   </div>
 </section>
 
-<!-- LIVE ROOM -->
 <section style="padding-top:0">
-  <div class="container">
+  <div class="wrap">
     <div class="live-room reveal" id="live-room">
-      <p class="eyebrow gold"><span class="live-dot"></span> &nbsp;The Wick Room • Live every market day</p>
+      <p class="eyebrow" style="color:#f0d47a"><span class="dot" style="display:inline-block;vertical-align:middle;margin-right:6px"></span> The Wick Room • Live every market day</p>
       <h2>We trade live pretty much every day.</h2>
-      <p style="max-width:600px">Charts open, levels marked, trades called as they happen — including the days when the right trade is no trade at all.</p>
-      <div class="grid-2">
-        <div class="live-item"><i class="bi bi-broadcast"></i><div><b>Live walkthroughs</b><span>London and New York sessions, on Forex, gold and indices.</span></div></div>
-        <div class="live-item"><i class="bi bi-chat-dots"></i><div><b>Ask while it happens</b><span>Why this level, why this wick, why wait — answered on the chart.</span></div></div>
-      </div>
-      <div style="margin-top:22px"><a class="btn btn-gold shine" href="#join"><i class="bi bi-door-open"></i> Join the room free</a></div>
+      <p>Charts open, levels marked, trades called as they happen — including the days when the right trade is no trade at all.</p>
+      <div class="live-item"><i class="bi bi-broadcast"></i><div><b>Live walkthroughs</b><span>London and New York sessions, on Forex, gold and indices.</span></div></div>
+      <div class="live-item"><i class="bi bi-chat-dots"></i><div><b>Ask while it happens</b><span>Why this level, why this wick, why wait — answered on the chart.</span></div></div>
+      <div style="margin-top:16px"><a class="btn btn-gold" href="#join"><i class="bi bi-door-open"></i> Join the room free</a></div>
     </div>
   </div>
 </section>
 
-<!-- WHO IT IS FOR -->
 <section style="padding-top:0">
-  <div class="container">
+  <div class="wrap">
     <p class="eyebrow">Is this for you?</p>
     <h2>For serious beginners. Honest about the rest.</h2>
-    <div class="grid-2" style="margin-top:18px">
-      <div class="for-col good"><h3><i class="bi bi-check-circle"></i> This is for you if…</h3><ul class="check-list" style="margin:0"><li><i class="bi bi-check"></i><span>You are new, or you keep losing the same way.</span></li><li><i class="bi bi-check"></i><span>You want one clear method, not ten indicators.</span></li><li><i class="bi bi-check"></i><span>You will practise on demo first and respect risk rules.</span></li></ul></div>
-      <div class="for-col bad"><h3><i class="bi bi-x-circle"></i> This is not for you if…</h3><ul class="check-list" style="margin:0"><li><i class="bi bi-x"></i><span>You want guaranteed profits or someone to trade for you.</span></li><li><i class="bi bi-x"></i><span>You want to risk money you cannot afford to lose.</span></li><li><i class="bi bi-x"></i><span>You are looking for a get-rich-quick scheme.</span></li></ul></div>
+    <div class="for-grid" style="margin-top:14px">
+      <div class="for-col good"><h3><i class="bi bi-check-circle"></i> This is for you if…</h3><ul class="check-list"><li><i class="bi bi-check"></i><span>You are new, or you keep losing the same way.</span></li><li><i class="bi bi-check"></i><span>You want one clear method, not ten indicators.</span></li><li><i class="bi bi-check"></i><span>You will practise on demo first and respect risk rules.</span></li></ul></div>
+      <div class="for-col bad"><h3><i class="bi bi-x-circle"></i> This is not for you if…</h3><ul class="check-list"><li><i class="bi bi-x"></i><span>You want guaranteed profits or someone to trade for you.</span></li><li><i class="bi bi-x"></i><span>You want to risk money you cannot afford to lose.</span></li><li><i class="bi bi-x"></i><span>You are looking for a get-rich-quick scheme.</span></li></ul></div>
     </div>
   </div>
 </section>
 
-<!-- JOIN -->
 <section class="join reveal" id="join">
-  <div class="container join-grid">
+  <div class="wrap join-grid">
     <div class="join-left">
-      <p class="eyebrow gold">Join free</p>
+      <p class="eyebrow" style="color:#f0d47a">Join free</p>
       <h2>Claim your free place in The Wick Room.</h2>
-      <p class="lead" style="color:#d3deee">Leave your details and we will send your free starter lesson and your invite to the next live session.</p>
+      <p>Leave your details and we will send your free starter lesson and your invite to the next live session.</p>
       <ul class="check-list">
         <li><i class="bi bi-check-circle-fill"></i><span><strong>Free starter lesson:</strong> The Wick Theory in 15 minutes.</span></li>
         <li><i class="bi bi-check-circle-fill"></i><span><strong>Live room invite:</strong> join the next live trading day.</span></li>
         <li><i class="bi bi-check-circle-fill"></i><span><strong>Starter checklist:</strong> charts, demo account and risk rules.</span></li>
       </ul>
-      <p class="small" style="color:#9fb4d8;margin-top:16px"><i class="bi bi-lock"></i> Your details go only to Jason FX Academy, by email, to send your invite. We never sell your data.</p>
+      <p class="small" style="color:#98a2b3;margin-top:14px"><i class="bi bi-lock"></i> Your details go only to Jason FX Academy, by email, to send your invite. We never sell your data.</p>
     </div>
     <div class="form-card">
       <h3>Get your free invite</h3>
-      <p class="small" style="margin:0 0 18px">Takes less than a minute. Fields marked * are required.</p>
+      <p class="small" style="margin:0 0 14px">Takes less than a minute. Fields marked * are required.</p>
       <form id="leadForm" novalidate>
         <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
         <div class="field"><label for="name">Full name *</label><input id="name" name="name" type="text" placeholder="e.g. Jason Adeyemi" required autocomplete="name"></div>
@@ -201,19 +178,18 @@
           <div class="field"><label for="market">What do you want to trade?</label><select id="market" name="market"><option value="Forex">Forex</option><option value="Gold (XAUUSD)">Gold (XAUUSD)</option><option value="Indices">Indices</option><option value="Crypto">Crypto</option><option value="Not sure yet">Not sure yet</option></select></div>
         </div>
         <label class="consent"><input type="checkbox" required style="margin-top:3px"> I agree to be contacted by email / WhatsApp about my free lesson and live-room invite. *</label>
-        <button id="submitBtn" class="btn btn-blue shine" type="submit" style="width:100%;justify-content:center;margin-top:16px"><i class="bi bi-send"></i> Claim my free place</button>
-        <p class="small" style="text-align:center;margin:10px 0 0">No card required. Education only — no guaranteed profits.</p>
+        <button id="submitBtn" class="btn btn-blue" type="submit" style="width:100%;justify-content:center;margin-top:14px"><i class="bi bi-send"></i> Claim my free place</button>
+        <p class="small" style="text-align:center;margin:8px 0 0">No card required. Education only — no guaranteed profits.</p>
       </form>
-      <div class="form-success" id="formSuccess"><h3 style="margin:0 0 6px"><i class="bi bi-check-circle-fill" style="color:#198754"></i> You are in, <span id="successName">friend</span>.</h3><p style="margin:0;color:var(--muted);font-size:15px">Thank you — your details have been sent to Jason FX Academy. Check your email for your free starter lesson and live-room invite.</p></div>
+      <div class="form-success" id="formSuccess"><h3 style="margin:0 0 6px"><i class="bi bi-check-circle-fill" style="color:#067647"></i> You are in, <span id="successName">friend</span>.</h3><p style="margin:0;color:var(--muted);font-size:13px">Thank you — your details have been sent to Jason FX Academy. Check your email for your free starter lesson and live-room invite.</p></div>
       <div class="form-error" id="formError" role="alert"></div>
     </div>
   </div>
-  <div class="container"><p class="small" style="text-align:center;margin:22px 0 0;line-height:1.6">Trading involves substantial risk of loss and is not suitable for every investor. Past performance does not guarantee future results. Jason FX Academy provides education only — not financial advice. © <span id="year">2026</span> Jason FX Academy • jasonfxacademy.com</p></div>
+  <div class="wrap"><p class="small" style="text-align:center;margin:18px 0 0;line-height:1.6">Trading involves substantial risk of loss. Past performance does not guarantee future results. Jason FX Academy provides education only — not financial advice. © <span id="year">2026</span> Jason FX Academy • jasonfxacademy.com</p></div>
 </section>
 
-<!-- FAQ -->
 <section id="faq" class="reveal" style="padding-top:0">
-  <div class="container" style="max-width:780px">
+  <div class="wrap" style="max-width:720px">
     <p class="eyebrow" style="text-align:center">Support</p>
     <h2 style="text-align:center">Questions, answered straight</h2>
     <div class="faq-item open"><button class="faq-q" type="button">Is joining really free? <i class="bi bi-plus-lg"></i></button><div class="faq-a">Yes — registering, the free starter lesson and your first live-room invite are free. No card is required.</div></div>
@@ -224,6 +200,6 @@
 </section>
 
 </main>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.v4.js?v=4"></script>
 </body>
 </html>
