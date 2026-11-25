@@ -124,25 +124,47 @@ section{padding:36px 0}
 .testi-person b{display:block;font-size:13px;color:var(--ink)}
 .testi-person span span{display:block;font-size:11px;color:var(--muted)}
 @media(min-width:860px){.testi-grid{grid-template-columns:1fr 1fr}}
-/* Photo testimonials */
-.photo-testi-grid{display:grid;grid-template-columns:1fr;gap:12px}
-.photo-testi-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.25s}
-.photo-testi-card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(16,24,40,.1)}
-.photo-testi-card img{width:100%;height:170px;object-fit:cover}
-.photo-testi-body{padding:16px}
-.acquired{display:inline-flex;align-items:center;gap:6px;background:#fef3c7;color:#92400e;font-size:11px;font-weight:700;border-radius:999px;padding:5px 10px}
-.acquired i{font-size:13px}
-@media(min-width:860px){.photo-testi-grid{grid-template-columns:repeat(3,1fr)}}
+/* Live trading chart animation */
+@keyframes candleIn{from{opacity:0;transform:scaleY(.3) translateY(8px)}to{opacity:1;transform:scaleY(1) translateY(0)}}
+@keyframes lineDraw{from{stroke-dashoffset:900}to{stroke-dashoffset:0}}
+@keyframes glowPulse{0%,100%{box-shadow:0 0 0 0 rgba(240,212,122,.25)}50%{box-shadow:0 0 24px 4px rgba(240,212,122,.18)}}
+@keyframes floatSoft{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes flashUp{0%{color:#12b76a}100%{color:inherit}}
+.chart-anim .chart-card{background:linear-gradient(160deg,#0b1220,#101828);border:1px solid #1d2939;border-radius:18px;padding:20px;color:#fff;animation:glowPulse 4s ease-in-out infinite;overflow:hidden}
+.chart-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+.chart-pair{font-weight:900;font-size:16px;color:#fff;display:block}
+.chart-live{font-size:10px;color:#12b76a;letter-spacing:.12em;vertical-align:middle;margin-left:6px}
+.chart-sub{font-size:11px;color:#98a2b3}
+.chart-price{text-align:right}
+.chart-price #livePrice{font-size:20px;font-weight:900;color:#fff;display:block;line-height:1.1;transition:color .3s}
+.chg{font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px}
+.chg.up{background:rgba(18,183,106,.18);color:#32d583}
+.chg.down{background:rgba(240,68,56,.18);color:#f97066}
+.chart-body{display:flex;align-items:flex-end;gap:7px;height:130px;padding:16px 4px 0;border-bottom:1px solid rgba(255,255,255,.14);margin-top:8px}
+.live-candle{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-width:0;animation:candleIn .5s ease both}
+.live-candle .wick-line{width:2px;background:#667085}
+.live-candle .wick-line.gold{background:#f0d47a;width:3px}
+.live-candle .candle-body{width:100%;border-radius:3px;transform-origin:bottom}
+.live-candle.up .candle-body{background:#12b76a}
+.live-candle.down .candle-body{background:#f04438}
+.chart-line{height:52px;margin-top:-52px;position:relative;pointer-events:none;opacity:.9}
+.chart-line svg{width:100%;height:100%}
+.chart-line path{stroke-dasharray:900;animation:lineDraw 2.4s ease forwards}
+.chart-foot{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.signal{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:6px 10px;font-size:11px;color:#d0d5dd}
+.signal.buy{color:#32d583;border-color:rgba(18,183,106,.4)}
+.signal.gold{color:#f0d47a}
+.video-card{animation:floatSoft 6s ease-in-out infinite}
+.testi-card,.wick-card,.module{transition:transform .25s ease,box-shadow .25s ease}
+.testi-card:hover,.wick-card:hover{transform:translateY(-3px)}
 /* For / not for */
 .for-grid{display:grid;grid-template-columns:1fr;gap:12px}
 .for-col{border-radius:14px;padding:18px}
 .for-col.good{background:#ecfdf3;border:1px solid #a6f4c5}
-.for-col.bad{background:#fef3f2;border:1px solid #fecdca}
 .for-col h3{margin-bottom:8px;font-size:15px}
 .check-list{list-style:none;padding:0;margin:10px 0;display:grid;gap:8px}
 .check-list li{display:flex;gap:8px;align-items:flex-start;font-size:13px}
 .check-list i{color:var(--green);font-size:15px;flex-shrink:0;margin-top:2px}
-.for-col.bad .check-list i{color:#b42318}
 @media(min-width:860px){.for-grid{grid-template-columns:1fr 1fr}}
 /* Join */
 .join{background:var(--cream)}
