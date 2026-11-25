@@ -211,20 +211,16 @@
     <div class="form-card">
       <h3>Get your free invite</h3>
       <p class="small" style="margin:0 0 14px">Takes less than a minute. Fields marked * are required.</p>
-      <form id="leadForm" action="https://formsubmit.co/onespiritgate@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="New Jason FX Academy lead">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://jason-fx-academy.pages.dev/thank-you.html">
-        <input type="text" name="_honey" style="display:none">
+      <form id="leadForm" novalidate>
+        <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
         <div class="field"><label for="name">Full name *</label><input id="name" name="name" type="text" placeholder="e.g. Jason Miller" required autocomplete="name"></div>
         <div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email"></div>
         <div class="field-row">
-          <div class="field"><label for="whatsapp">WhatsApp number</label><input id="whatsapp" name="WhatsApp" type="tel" placeholder="+1 …" autocomplete="tel"></div>
-          <div class="field"><label for="country">Country</label><input id="country" name="Country" type="text" placeholder="United States" autocomplete="country-name"></div>
+          <div class="field"><label for="whatsapp">WhatsApp number</label><input id="whatsapp" name="whatsapp" type="tel" placeholder="+1 …" autocomplete="tel"></div>
+          <div class="field"><label for="country">Country</label><input id="country" name="country" type="text" placeholder="United States" autocomplete="country-name"></div>
         </div>
-        <div class="field"><label for="telegram">Telegram <span style="color:var(--muted);font-weight:400">(optional)</span></label><input id="telegram" name="Telegram" type="text" placeholder="@yourusername"></div>
-        <div class="field"><label for="experience">Trading experience</label><select id="experience" name="Trading experience"><option value="Beginner — never traded">Beginner — never traded</option><option value="Beginner — less than 1 year">Beginner — less than 1 year</option><option value="Intermediate — 1 to 3 years">Intermediate — 1 to 3 years</option><option value="Advanced — 3+ years">Advanced — 3+ years</option></select></div>
+        <div class="field"><label for="telegram">Telegram <span style="color:var(--muted);font-weight:400">(optional)</span></label><input id="telegram" name="telegram" type="text" placeholder="@yourusername"></div>
+        <div class="field"><label for="experience">Trading experience</label><select id="experience" name="experience"><option value="Beginner — never traded">Beginner — never traded</option><option value="Beginner — less than 1 year">Beginner — less than 1 year</option><option value="Intermediate — 1 to 3 years">Intermediate — 1 to 3 years</option><option value="Advanced — 3+ years">Advanced — 3+ years</option></select></div>
         <label class="consent"><input type="checkbox" required style="margin-top:3px"> I agree to be contacted by email / WhatsApp about my free lesson and live-room invite. *</label>
         <button id="submitBtn" class="btn btn-blue" type="submit" style="width:100%;justify-content:center;margin-top:14px"><i class="bi bi-send"></i> Reserve my spot</button>
         <p class="small" style="text-align:center;margin:8px 0 0">No card required. Education only — no guaranteed profits.</p>
