@@ -1,7 +1,13 @@
-// Jason FX Academy — lead form + FAQ + year
+// Jason FX Academy — lead form + FAQ + year + scroll reveal
 document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
   // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(btn => {
