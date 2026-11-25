@@ -113,6 +113,17 @@ section{padding:36px 0}
 .live-item b{color:#fff;display:block;font-size:13px}
 .live-item span{color:#d0d5dd;font-size:12px}
 @media(min-width:860px){.live-room{padding:28px}}
+/* Testimonials */
+.testi-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.testi-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;transition:.25s}
+.testi-card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(16,24,40,.1)}
+.stars{color:#f59e0b;font-size:13px;letter-spacing:2px}
+.testi-quote{font-size:13px;color:var(--text);margin:10px 0 14px;line-height:1.6}
+.testi-person{display:flex;gap:10px;align-items:center}
+.testi-avatar{width:36px;height:36px;flex:0 0 36px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:12px}
+.testi-person b{display:block;font-size:13px;color:var(--ink)}
+.testi-person span span{display:block;font-size:11px;color:var(--muted)}
+@media(min-width:860px){.testi-grid{grid-template-columns:1fr 1fr}}
 /* For / not for */
 .for-grid{display:grid;grid-template-columns:1fr;gap:12px}
 .for-col{border-radius:14px;padding:18px}
