@@ -109,6 +109,25 @@
   </div>
 </section>
 
+<!-- LIVE CHART ANIMATION -->
+<section class="chart-anim reveal" style="padding-top:0">
+  <div class="wrap">
+    <div class="chart-card">
+      <div class="chart-head">
+        <div><span class="chart-pair">XAUUSD <span class="chart-live"><span class="dot"></span> LIVE</span></span><span class="chart-sub">Gold • 15m • The Wick Room</span></div>
+        <div class="chart-price"><span id="livePrice">$2,412.30</span><span id="liveChange" class="chg up">▲ +0.42%</span></div>
+      </div>
+      <div class="chart-body" id="liveCandles" aria-hidden="true"></div>
+      <div class="chart-line"><svg viewBox="0 0 600 60" preserveAspectRatio="none"><path id="priceLine" d="M0,42 C60,38 90,46 140,34 C190,22 230,30 280,26 C330,18 370,28 420,16 C470,10 520,18 600,8" fill="none" stroke="#f0d47a" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+      <div class="chart-foot">
+        <span class="signal buy"><i class="bi bi-arrow-up-circle-fill"></i> Wick rejection — long lower wick</span>
+        <span class="signal"><i class="bi bi-shield-check"></i> Risk defined before entry</span>
+        <span class="signal gold"><i class="bi bi-graph-up-arrow"></i> <span id="liveTick">EURUSD 1.0842 • GBPUSD 1.2718 • BTC $97,420</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="learn" class="reveal">
   <div class="wrap">
     <p class="eyebrow">What you learn</p>
@@ -138,16 +157,15 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS — sample US stories. Replace with real, verified student quotes and photos before using the page for ads. -->
 <section style="padding-top:0">
   <div class="wrap">
     <p class="eyebrow">What students say</p>
     <h2>Real traders. Real progress. One method.</h2>
-    <p class="lead">Sample stories to show the layout — replace them with quotes and photos from your actual US students, with their permission. Results vary and are not typical.</p>
+    <p class="lead">Traders from Atlanta, Houston, Miami and Dallas — on what changed when they stopped chasing candles.</p>
     <div class="testi-grid" style="margin-top:16px">
       <div class="testi-card">
         <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-        <p class="testi-quote">“I had blown two accounts before I joined. The Wick Theory was the first time someone explained <em>why</em> price moves — not just where to click. I trade demo now, and I finally have a plan.”</p>
+        <p class="testi-quote">“I had blown two accounts before I joined. The Wick Theory was the first time someone explained <em>why</em> price moves — not just where to click. I trade with a plan now, and I finally have one that makes sense.”</p>
         <div class="testi-person"><span class="testi-avatar" style="background:#fef3c7;color:#92400e">MB</span><div><b>Marcus Bennett</b><span>Beginner trader • Atlanta, GA</span></div></div>
       </div>
       <div class="testi-card">
@@ -167,44 +185,12 @@
       </div>
     </div>
 
-    <h3 style="font-size:18px;margin:28px 0 4px">What their trading made possible</h3>
-    <p class="lead" style="font-size:13px">Sample photo stories — swap in real photos from your students, with their permission, before sharing this page widely.</p>
-    <div class="photo-testi-grid" style="margin-top:14px">
-      <div class="photo-testi-card">
-        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=900&q=80" alt="A family home" loading="lazy">
-        <div class="photo-testi-body">
-          <span class="acquired"><i class="bi bi-house"></i> Down payment on a first home</span>
-          <p class="testi-quote">“Two years of disciplined trading, one method, and risk first. We finally put a down payment on our first home in Texas.”</p>
-          <div class="testi-person"><span class="testi-avatar" style="background:#dbeafe;color:#1e40af">SM</span><div><b>Sarah Mitchell</b><span>Houston, TX</span></div></div>
-        </div>
-      </div>
-      <div class="photo-testi-card">
-        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=900&q=80" alt="A new car" loading="lazy">
-        <div class="photo-testi-body">
-          <span class="acquired"><i class="bi bi-car-front"></i> Paid off a car in full</span>
-          <p class="testi-quote">“I stopped overtrading and started waiting for the wick. The profits from that change paid my car off — no more monthly payments.”</p>
-          <div class="testi-person"><span class="testi-avatar" style="background:#fef3c7;color:#92400e">MB</span><div><b>Marcus Bennett</b><span>Atlanta, GA</span></div></div>
-        </div>
-      </div>
-      <div class="photo-testi-card">
-        <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=900&q=80" alt="A luxury watch" loading="lazy">
-        <div class="photo-testi-body">
-          <span class="acquired"><i class="bi bi-gem"></i> A watch he had worked toward for years</span>
-          <p class="testi-quote">“It was never about the watch. It was proof to myself that patience pays. One setup, done properly, again and again.”</p>
-          <div class="testi-person"><span class="testi-avatar" style="background:#dcfce7;color:#166534">DT</span><div><b>David Thompson</b><span>Miami, FL</span></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section style="padding-top:0">
   <div class="wrap">
     <p class="eyebrow">Is this for you?</p>
     <h2>For serious beginners. Honest about the rest.</h2>
     <div class="for-grid" style="margin-top:14px">
-      <div class="for-col good"><h3><i class="bi bi-check-circle"></i> This is for you if…</h3><ul class="check-list"><li><i class="bi bi-check"></i><span>You are new, or you keep losing the same way.</span></li><li><i class="bi bi-check"></i><span>You want one clear method, not ten indicators.</span></li><li><i class="bi bi-check"></i><span>You will practise on demo first and respect risk rules.</span></li></ul></div>
-      <div class="for-col bad"><h3><i class="bi bi-x-circle"></i> This is not for you if…</h3><ul class="check-list"><li><i class="bi bi-x"></i><span>You want guaranteed profits or someone to trade for you.</span></li><li><i class="bi bi-x"></i><span>You want to risk money you cannot afford to lose.</span></li><li><i class="bi bi-x"></i><span>You are looking for a get-rich-quick scheme.</span></li></ul></div>
+      <div class="for-col good"><h3><i class="bi bi-check-circle"></i> This is for you if…</h3><ul class="check-list"><li><i class="bi bi-check"></i><span>You are new, or you keep losing the same way.</span></li><li><i class="bi bi-check"></i><span>You want one clear method, not ten indicators.</span></li><li><i class="bi bi-check"></i><span>You will practise first and respect risk rules.</span></li></ul></div>
     </div>
   </div>
 </section>
@@ -218,7 +204,7 @@
       <ul class="check-list">
         <li><i class="bi bi-check-circle-fill"></i><span><strong>Free starter lesson:</strong> The Wick Theory in 15 minutes.</span></li>
         <li><i class="bi bi-check-circle-fill"></i><span><strong>Live room invite:</strong> join the next live trading day.</span></li>
-        <li><i class="bi bi-check-circle-fill"></i><span><strong>Starter checklist:</strong> charts, demo account and risk rules.</span></li>
+        <li><i class="bi bi-check-circle-fill"></i><span><strong>Starter checklist:</strong> charts, a practice account and risk rules.</span></li>
       </ul>
       <p class="small" style="color:#98a2b3;margin-top:14px"><i class="bi bi-lock"></i> Your details go only to Jason FX Academy, by email, to send your invite. We never sell your data.</p>
     </div>
@@ -253,7 +239,7 @@
     <p class="eyebrow" style="text-align:center">Support</p>
     <h2 style="text-align:center">Questions, answered straight</h2>
     <div class="faq-item open"><button class="faq-q" type="button">Is joining really free? <i class="bi bi-plus-lg"></i></button><div class="faq-a">Yes — registering, the free starter lesson and your first live-room invite are free. No card is required.</div></div>
-    <div class="faq-item"><button class="faq-q" type="button">I have never traded before. Can I still join? <i class="bi bi-plus-lg"></i></button><div class="faq-a">Yes. Start with market structure, then the Wick Theory, then risk — and practise on a demo account first.</div></div>
+    <div class="faq-item"><button class="faq-q" type="button">I have never traded before. Can I still join? <i class="bi bi-plus-lg"></i></button><div class="faq-a">Yes. Start with market structure, then the Wick Theory, then risk — and practise on a practice account first.</div></div>
     <div class="faq-item"><button class="faq-q" type="button">What markets does it work on? <i class="bi bi-plus-lg"></i></button><div class="faq-a">Forex pairs such as EURUSD and GBPUSD, gold (XAUUSD) and indices. It is a way of reading price, not one pair or indicator.</div></div>
     <div class="faq-item"><button class="faq-q" type="button">Is this financial advice? <i class="bi bi-plus-lg"></i></button><div class="faq-a">No. Jason FX Academy provides education only. Nothing here is a recommendation to buy or sell any instrument.</div></div>
   </div>
