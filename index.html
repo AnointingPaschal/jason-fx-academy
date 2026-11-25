@@ -45,7 +45,7 @@
   <div class="container hero-grid">
     <div>
       <span class="pill gold"><i class="bi bi-play-circle"></i> The Wick Theory &bull; Watch the film below</span>
-      <h1>Trading is just you versus you.<br><span>You versus the charts.</span></h1>
+      <h1>Trading is just you versus you.<br><span class="gold-text">You versus the charts.</span></h1>
       <p class="lead">Most traders lose because they read the wrong part of the candle. At Jason FX Academy you learn to read what institutions leave behind — the wick — and to trade it live, with discipline, every market day.</p>
       <div class="hero-actions">
         <a class="btn btn-blue" href="#join"><i class="bi bi-person-plus"></i> Claim my free place</a>
@@ -53,12 +53,14 @@
       </div>
       <p class="hero-note"><i class="bi bi-shield-check"></i><span>No hype, no guaranteed profits. A clear method, live trading, risk first — built on the Caplix Market trading framework, live in the markets since 2010.</span></p>
       <div class="hero-stats">
-        <div><b>3%</b><span>make it to Division I basketball — the odds in the film</span></div>
-        <div><b>10%</b><span>become profitable traders, as the film puts it</span></div>
+        <div><b>3<em>%</em></b><span>make it to Division I basketball — the odds in the film</span></div>
+        <div><b>10<em>%</em></b><span>become profitable traders, as the film puts it</span></div>
         <div><b>1 method</b><span>The Wick Theory, taught step by step</span></div>
       </div>
     </div>
-    <div>
+    <div class="hero-video-wrap">
+      <div class="float-chip" style="top:-18px;left:-14px"><b>$10,000</b>live P&amp;L moment<br>in the film</div>
+      <div class="float-chip" style="bottom:-16px;right:-10px"><b>The Wick Room</b>live every<br>market day</div>
       <div class="video-card">
         <video controls preload="metadata" poster="assets/img/poster.jpg" playsinline>
           <source src="assets/video/wick-theory.mp4" type="video/mp4">
@@ -79,8 +81,33 @@
   <span>Forex</span> &bull; <span>Gold &mdash; XAUUSD</span> &bull; <span>Indices</span> &bull; <span>EURUSD</span> &bull; <span>GBPUSD</span> &bull; <span>Risk first</span> &bull; <span>Live every market day</span> &bull; <span>The Wick Room</span>
 </div>
 
+<!-- Live market tape -->
+<div class="tv-tape">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+      "symbols": [
+        {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"},
+        {"proName": "FOREXCOM:NSXUSD", "title": "US 100"},
+        {"proName": "FX_IDC:EURUSD", "title": "EUR/USD"},
+        {"proName": "FX_IDC:GBPUSD", "title": "GBP/USD"},
+        {"proName": "OANDA:XAUUSD", "title": "Gold"},
+        {"proName": "BITSTAMP:BTCUSD", "title": "Bitcoin"},
+        {"proName": "BITSTAMP:ETHUSD", "title": "Ethereum"}
+      ],
+      "showSymbolLogo": true,
+      "isTransparent": true,
+      "displayMode": "adaptive",
+      "colorTheme": "dark",
+      "locale": "en"
+    }
+    </script>
+  </div>
+</div>
+
 <!-- FILM / STORY -->
-<section class="story" id="film">
+<section class="story reveal" id="film">
   <div class="container story-grid">
     <div class="story-video">
       <video controls preload="metadata" poster="assets/img/poster.jpg" playsinline>
@@ -88,6 +115,10 @@
       </video>
     </div>
     <div>
+      <div class="photo-row" style="margin-top:0;margin-bottom:18px">
+        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=900&q=80" alt="Live trading charts" loading="lazy">
+        <img src="assets/img/lambo.jpg" alt="From the Wick Theory film" loading="lazy">
+      </div>
       <p class="eyebrow">Watch the story</p>
       <h2>He threw away a basketball scholarship to become a trader who could not even make money.</h2>
       <p class="lead" style="font-size:16px">For the next two years, he basically failed. Genuinely thinking he might have ruined his life. Then he stopped chasing every candle — and started reading the wicks.</p>
@@ -104,7 +135,7 @@
 </section>
 
 <!-- WICK THEORY -->
-<section class="wick" id="wick-theory">
+<section class="reveal wick" id="wick-theory">
   <div class="container">
     <p class="eyebrow gold">The Wick Theory</p>
     <h2>Bodies are retail.<br>Wicks are institutions.</h2>
@@ -112,17 +143,17 @@
     <div class="grid-3" style="margin-top:32px">
       <div class="wick-card">
         <div class="icon-box"><i class="bi bi-bar-chart"></i></div>
-        <h3>1. Read the body</h3>
+        <span class="wick-num">STEP 01</span><h3>Read the body</h3>
         <p>The body tells you the crowd's story for that period. Useful — but it is not where the edge lives.</p>
       </div>
       <div class="wick-card">
         <div class="icon-box gold"><i class="bi bi-lightbulb"></i></div>
-        <h3>2. Follow the wick</h3>
+        <span class="wick-num">STEP 02</span><h3>Follow the wick</h3>
         <p>A long wick is a rejection, a sweep, a footprint. Institutions cannot hide size. The wick is where they show it.</p>
       </div>
       <div class="wick-card">
         <div class="icon-box dark" style="background:#c9a227;color:#111"><i class="bi bi-crosshair"></i></div>
-        <h3>3. Trade the clue</h3>
+        <span class="wick-num">STEP 03</span><h3>Trade the clue</h3>
         <p>Wait for the clue, define your risk, then take the trade — or walk away. All it takes is one trade, done properly.</p>
       </div>
     </div>
@@ -132,13 +163,23 @@
         <p style="color:#b9c7dd">In the film, the same pattern repeats across Forex, gold and indices: price sweeps a level, leaves a long wick, and then moves. Jason FX Academy teaches you to spot that sweep, confirm it, and manage the trade — instead of chasing price after it has already moved.</p>
         <p style="color:#b9c7dd;margin-bottom:0">You will not learn a hundred indicators. You will learn one way of reading the market, and how to use it with patience.</p>
       </div>
+      <div>
+        <div class="candles" aria-hidden="true">
+          <div class="candle down"><div class="wick-line" style="height:22px"></div><div class="candle-body" style="height:48px"></div><div class="wick-line" style="height:14px"></div></div>
+          <div class="candle up"><div class="wick-line" style="height:12px"></div><div class="candle-body" style="height:62px"></div><div class="wick-line gold" style="height:34px"></div></div>
+          <div class="candle down"><div class="wick-line" style="height:18px"></div><div class="candle-body" style="height:40px"></div><div class="wick-line" style="height:10px"></div></div>
+          <div class="candle up"><div class="wick-line gold" style="height:38px"></div><div class="candle-body" style="height:70px"></div><div class="wick-line" style="height:12px"></div></div>
+          <div class="candle up"><div class="wick-line" style="height:10px"></div><div class="candle-body" style="height:84px"></div><div class="wick-line gold" style="height:28px"></div></div>
+        </div>
+        <p class="small" style="color:#9fb4d8;margin-top:10px">Gold wicks — where institutions left a footprint.</p>
+      </div>
       <img src="assets/img/wick.jpg" alt="Candlestick wicks on a trading chart from the Wick Theory film">
     </div>
   </div>
 </section>
 
 <!-- WHAT YOU LEARN -->
-<section id="learn">
+<section class="reveal" id="learn">
   <div class="container">
     <div style="display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap">
       <div>
@@ -147,7 +188,11 @@
       </div>
       <p class="lead" style="font-size:16px;max-width:420px;margin:0">Six modules. Live practice in the room. Homework on real charts — Forex, gold (XAUUSD) and indices, the markets from the film.</p>
     </div>
-    <div style="margin-top:28px">
+    <figure class="learn-img" style="margin:28px 0 10px;position:relative">
+      <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1600&q=80" alt="Trader studying charts" loading="lazy">
+      <figcaption><strong>The Wick Room, live.</strong> Same charts, same method, questions answered in real time.</figcaption>
+    </figure>
+    <div style="margin-top:18px">
       <div class="module"><span class="module-num">01</span><div><h3>Market structure, in plain English</h3><p>Trend, range, support and resistance — how price actually moves, and why most beginners read it backwards.</p></div><span class="tag">Foundation</span></div>
       <div class="module"><span class="module-num">02</span><div><h3>The Wick Theory, step by step</h3><p>Bodies vs. wicks, sweeps, liquidity, and the exact clues to look for before you even think about entering.</p></div><span class="tag">Core method</span></div>
       <div class="module"><span class="module-num">03</span><div><h3>Entries, stops and targets</h3><p>Where to enter, where you are wrong, and where to take profit — written down before the trade, not after it.</p></div><span class="tag">Execution</span></div>
@@ -207,10 +252,10 @@
 </section>
 
 <!-- JOIN / LEAD FORM -->
-<section class="join" id="join">
+<section class="reveal join" id="join">
   <div class="container join-grid">
-    <div>
-      <p class="eyebrow">Join free</p>
+    <div class="join-left">
+      <p class="eyebrow gold">Join free</p>
       <h2>Claim your free place in The Wick Room.</h2>
       <p class="lead" style="font-size:16px">Leave your details and Jason FX Academy will send you the free starter lesson and your invite to the next live session. No spam — one welcome email, then live-room updates only.</p>
       <ul class="check-list">
@@ -287,7 +332,7 @@
 </section>
 
 <!-- FAQ -->
-<section id="faq" style="padding-top:20px">
+<section class="reveal" id="faq" style="padding-top:20px">
   <div class="container" style="max-width:820px">
     <p class="eyebrow" style="text-align:center">Support</p>
     <h2 style="text-align:center">Frequently asked questions</h2>
