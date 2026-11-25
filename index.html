@@ -4,13 +4,47 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jason FX Academy — We Trade For You</title>
-<meta name="description" content="Jason FX Academy trades Forex, gold and indices for you. Our traders use the Wick Theory. You share in the profit. Register free.">
+<meta name="description" content="Jason FX Academy trades Forex, gold and indices for you. Watch the video, register free, and let our traders trade for you.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101828'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='32' font-weight='bold' fill='%23d9a441' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.v4.css?v=4">
+<link rel="stylesheet" href="assets/css/style.v4.css?v=5">
+<style>
+  /* v5 — short page: video first, form second, swipe testimonials. No tickers, no live chart. */
+  .hero{padding:26px 0 20px;text-align:center}
+  .hero h1{max-width:640px;margin:10px auto}
+  .hero .lead{margin:0 auto}
+  .hero-video{max-width:760px;margin:18px auto 0}
+  .hero-video .video-card{animation:none}
+  .wick-line{font-size:12px;color:var(--muted);margin:10px 0 0}
+  .wick-line b{color:var(--ink)}
+  .hero-cta{margin-top:16px}
+  .trust-line{font-size:11px;color:var(--muted);margin-top:10px}
+  .steps{display:grid;grid-template-columns:1fr;gap:10px;margin-top:16px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;text-align:center}
+  .step-num{width:30px;height:30px;margin:0 auto 8px;border-radius:50%;background:var(--cream);color:var(--gold);border:1px solid #f0d47a;display:grid;place-items:center;font-weight:900;font-size:12px}
+  .step h3{font-size:14px;margin:0 0 4px}
+  .step p{color:var(--muted);font-size:12px;margin:0}
+  @media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+  /* Swipe testimonials — one card at a time, swipe / arrows / dots */
+  .carousel{position:relative}
+  .carousel-track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:2px 2px 8px}
+  .carousel-track::-webkit-scrollbar{display:none}
+  .carousel-track .testi-card{flex:0 0 88%;scroll-snap-align:center}
+  @media(min-width:760px){.carousel-track .testi-card{flex:0 0 62%}}
+  .carousel-nav{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:6px}
+  .carousel-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;display:grid;place-items:center;font-size:16px}
+  .carousel-btn:hover{border-color:var(--ink)}
+  .carousel-dots{display:flex;gap:6px}
+  .carousel-dots button{width:8px;height:8px;border-radius:50%;border:0;background:#d0d5dd;cursor:pointer;padding:0}
+  .carousel-dots button.active{background:var(--gold-2);width:22px;border-radius:999px}
+  .swipe-hint{text-align:center;font-size:11px;color:var(--muted);margin:0 0 10px}
+  .join-short{padding-top:8px}
+  .join-short .form-card{max-width:560px;margin:0 auto;border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 40px rgba(16,24,40,.10)}
+  .final-cta{text-align:center;padding:28px 0 8px}
+</style>
 </head>
 <body>
 
@@ -20,13 +54,6 @@
       <span class="brand-mark"><i class="bi bi-candlestick"></i></span>
       <span class="brand-name">Jason <span>FX</span> Academy</span>
     </a>
-    <nav class="nav-links">
-      <a href="#video">Video</a>
-      <a href="#wick-theory">Wick Theory</a>
-      <a href="#how">How it works</a>
-      <a href="#live-room">Live Room</a>
-      <a href="#faq">FAQ</a>
-    </nav>
     <div class="top-actions">
       <span class="dot" aria-hidden="true"></span>
       <a class="btn btn-gold top-join" href="#join">Join free</a>
@@ -36,179 +63,36 @@
 
 <main id="top">
 
+<!-- 1 — VIDEO FIRST -->
 <section class="hero">
-  <div class="wrap hero-grid">
+  <div class="wrap">
     <div class="fade-up">
-      <span class="pill"><i class="bi bi-play-circle"></i> We trade for you</span>
       <h1>You do not trade. <em>We trade for you.</em></h1>
-      <p class="lead">Imagine waking up to trades already working for you. Our traders trade Forex, gold and indices for you, using the Wick Theory — bodies are retail, wicks are institutions. When our trades profit, you profit. Spots are limited — register free and let us trade for you.</p>
-      <div class="hero-actions">
-        <a class="btn btn-blue" href="#join"><i class="bi bi-person-plus"></i> Let us trade for me</a>
-        <a class="btn btn-ghost" href="#video"><i class="bi bi-play-fill"></i> Watch — 1:40</a>
+      <p class="lead">Imagine waking up to trades already working for you. Watch the video — it takes 1 minute 40 seconds.</p>
+      <div class="hero-video">
+        <div class="video-card">
+          <video controls preload="metadata" poster="assets/img/poster.jpg" playsinline>
+            <source src="assets/video/wick-theory.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-meta"><span><b>The Wick Theory</b> — the video</span><span><i class="bi bi-clock"></i> 1:40</span></div>
+        </div>
+        <p class="wick-line"><b>Bodies are retail. Wicks are institutions.</b> That is the method our traders use for you.</p>
       </div>
-      <div class="stats">
-        <div class="stat"><span class="stat-num"><span class="count" data-count="3">3</span>%</span><span class="stat-label">make it to Division I basketball</span></div>
-        <div class="stat"><span class="stat-num"><span class="count" data-count="10">10</span>%</span><span class="stat-label">become profitable traders</span></div>
-        <div class="stat"><span class="stat-num">1</span><span class="stat-label">method our traders use for you</span></div>
-      </div>
-    </div>
-    <div class="fade-up" id="video">
-      <div class="video-card">
-        <video controls preload="metadata" poster="assets/img/poster.jpg" playsinline>
-          <source src="assets/video/wick-theory.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <div class="video-meta"><span><b>The Wick Theory</b> — the video</span><span><i class="bi bi-clock"></i> 1:40</span></div>
+      <div class="hero-cta">
+        <a class="btn btn-blue" href="#join"><i class="bi bi-person-plus"></i> Register free — let us trade for me</a>
+        <p class="trust-line">Free to join &bull; No card required &bull; Trading involves risk — no guaranteed profits</p>
       </div>
     </div>
   </div>
 </section>
 
-<div class="ticker"><div class="ticker-track"><span>Forex</span>•<span>Gold — XAUUSD</span>•<span>Indices</span>•<span>EURUSD</span>•<span>GBPUSD</span>•<span>Risk first</span>•<span>Live daily</span>•<span>The Wick Room</span>•<span>Forex</span>•<span>Gold — XAUUSD</span>•<span>Indices</span>•<span>EURUSD</span>•<span>GBPUSD</span>•<span>Risk first</span>•<span>Live daily</span>•<span>The Wick Room</span></div></div>
-
-<div class="tv-tape">
-  <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-  {"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"US 100"},{"proName":"FX_IDC:EURUSD","title":"EUR/USD"},{"proName":"FX_IDC:GBPUSD","title":"GBP/USD"},{"proName":"OANDA:XAUUSD","title":"Gold"},{"proName":"BITSTAMP:BTCUSD","title":"Bitcoin"},{"proName":"BITSTAMP:ETHUSD","title":"Ethereum"}],"showSymbolLogo":true,"isTransparent":true,"displayMode":"adaptive","colorTheme":"light","locale":"en"}
-  </script></div>
-</div>
-
-<section class="story reveal">
-  <div class="wrap story-grid">
-    <div><img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1000&q=80" alt="Live trading charts" loading="lazy" class="story-img"></div>
-    <div>
-      <p class="eyebrow">The story</p>
-      <h2>He gave up a basketball scholarship to trade — and failed for two years.</h2>
-      <p class="lead">Then he stopped chasing every candle, and started reading the wicks. Now his traders trade that same method for people like you.</p>
-      <blockquote class="quote">“Let me tell you how lucky I am. I created my own luck.”<cite>— Dovydas</cite></blockquote>
-      <a class="btn btn-blue" href="#join"><i class="bi bi-arrow-right"></i> Let us trade for me</a>
-    </div>
-  </div>
-</section>
-
-<section class="wick reveal" id="wick-theory">
+<!-- 2 — FORM, RIGHT AFTER THE VIDEO -->
+<section class="join join-short reveal" id="join" style="background:var(--cream)">
   <div class="wrap">
-    <div class="wick-inner">
-      <p class="eyebrow" style="color:#f0d47a">The Wick Theory</p>
-      <h2>Bodies are retail.<br>Wicks are institutions.</h2>
-      <p class="lead">The body shows where retail traders pushed price. The wick shows where bigger money stepped in — and left a clue. This is the method our traders use on your behalf.</p>
-      <div class="wick-cards">
-        <div class="wick-card"><span class="wick-step">STEP 01</span><div class="icon-dot" style="margin-top:8px"><i class="bi bi-bar-chart"></i></div><h3>Read the body</h3><p>The body tells you the crowd's story. Useful — but not where the edge lives.</p></div>
-        <div class="wick-card"><span class="wick-step">STEP 02</span><div class="icon-dot" style="margin-top:8px"><i class="bi bi-lightbulb"></i></div><h3>Follow the wick</h3><p>A long wick is a rejection, a sweep, a footprint. Institutions cannot hide size.</p></div>
-        <div class="wick-card"><span class="wick-step">STEP 03</span><div class="icon-dot" style="margin-top:8px"><i class="bi bi-crosshair"></i></div><h3>We trade the clue for you</h3><p>Our traders wait for the clue, define the risk, then take the trade — or walk away.</p></div>
-      </div>
-      <div class="candles" aria-hidden="true">
-        <div class="candle down"><div class="wick-line" style="height:18px"></div><div class="candle-body" style="height:40px"></div><div class="wick-line" style="height:10px"></div></div>
-        <div class="candle up"><div class="wick-line" style="height:10px"></div><div class="candle-body" style="height:52px"></div><div class="wick-line gold" style="height:28px"></div></div>
-        <div class="candle down"><div class="wick-line" style="height:14px"></div><div class="candle-body" style="height:34px"></div><div class="wick-line" style="height:8px"></div></div>
-        <div class="candle up"><div class="wick-line gold" style="height:30px"></div><div class="candle-body" style="height:60px"></div><div class="wick-line" style="height:10px"></div></div>
-        <div class="candle up"><div class="wick-line" style="height:8px"></div><div class="candle-body" style="height:70px"></div><div class="wick-line gold" style="height:24px"></div></div>
-      </div>
-      <p class="small" style="color:#98a2b3;margin-top:8px">Gold wicks — where institutions left a footprint.</p>
-    </div>
-  </div>
-</section>
-
-<!-- LIVE CHART ANIMATION -->
-<section class="chart-anim reveal" style="padding-top:0">
-  <div class="wrap">
-    <div class="chart-card">
-      <div class="chart-head">
-        <div><span class="chart-pair">XAUUSD <span class="chart-live"><span class="dot"></span> LIVE</span></span><span class="chart-sub">Gold • 15m • Our traders, live</span></div>
-        <div class="chart-price"><span id="livePrice">$2,412.30</span><span id="liveChange" class="chg up">▲ +0.42%</span></div>
-      </div>
-      <div class="chart-body" id="liveCandles" aria-hidden="true"></div>
-      <div class="chart-line"><svg viewBox="0 0 600 60" preserveAspectRatio="none"><path id="priceLine" d="M0,42 C60,38 90,46 140,34 C190,22 230,30 280,26 C330,18 370,28 420,16 C470,10 520,18 600,8" fill="none" stroke="#f0d47a" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-      <div class="chart-foot">
-        <span class="signal buy"><i class="bi bi-arrow-up-circle-fill"></i> Wick rejection — long lower wick</span>
-        <span class="signal"><i class="bi bi-shield-check"></i> Risk defined before entry</span>
-        <span class="signal gold"><i class="bi bi-graph-up-arrow"></i> <span id="liveTick">EURUSD 1.0842 • GBPUSD 1.2718 • BTC $97,420</span></span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="how" class="reveal">
-  <div class="wrap">
-    <p class="eyebrow">How it works</p>
-    <h2>You register. We trade. You profit.</h2>
-    <p class="lead">Your money working while you live your life. Four simple steps to get started.</p>
-    <div style="margin-top:16px">
-      <div class="module"><span class="module-num">01</span><div><h3>Register free</h3><p>Leave your details below. We vet your spot and get in touch.</p></div><span class="tag">Free</span></div>
-      <div class="module"><span class="module-num">02</span><div><h3>Get set up</h3><p>We walk you through your account setup, step by step, on WhatsApp, Telegram or email.</p></div><span class="tag">Onboarding</span></div>
-      <div class="module"><span class="module-num">03</span><div><h3>Our traders trade for you</h3><p>Forex, gold and indices, using the Wick Theory — risk first, always.</p></div><span class="tag">We trade</span></div>
-      <div class="module"><span class="module-num">04</span><div><h3>You share in the profit</h3><p>When our trades for you profit, you share in that profit. Trading involves risk and losses are possible — no profit is guaranteed.</p></div><span class="tag">You profit</span></div>
-    </div>
-  </div>
-</section>
-
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="live-room reveal" id="live-room">
-      <p class="eyebrow" style="color:#f0d47a"><span class="dot" style="display:inline-block;vertical-align:middle;margin-right:6px"></span> The Wick Room • Live every market day</p>
-      <h2>Watch our traders trade live, pretty much every day.</h2>
-      <p>Charts open, levels marked, trades called as they happen — watch the same trades we take for you, in real time, including the days when the right trade is no trade at all.</p>
-      <div class="live-item"><i class="bi bi-broadcast"></i><div><b>Live trading, in the open</b><span>London and New York sessions, on Forex, gold and indices — the trades we take for you.</span></div></div>
-      <div class="live-item"><i class="bi bi-chat-dots"></i><div><b>Ask while it happens</b><span>Why this level, why this wick, why wait — answered on the chart.</span></div></div>
-      <div style="margin-top:16px"><a class="btn btn-gold" href="#join"><i class="bi bi-door-open"></i> Let us trade for me</a></div>
-    </div>
-  </div>
-</section>
-
-<section style="padding-top:0">
-  <div class="wrap">
-    <p class="eyebrow">What our members say</p>
-    <h2>Real members. Real profit. One method.</h2>
-    <p class="lead">Members from Atlanta, Houston, Miami and Dallas — on having our traders trade for them.</p>
-    <div class="testi-grid" style="margin-top:16px">
-      <div class="testi-card">
-        <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-        <p class="testi-quote">“I had blown two accounts trading on my own. Now Jason FX Academy trades for me — I do not stare at charts all day, and my account is finally growing.”</p>
-        <div class="testi-person"><span class="testi-avatar" style="background:#fef3c7;color:#92400e">MB</span><div><b>Marcus Bennett</b><span>Member • Atlanta, GA</span></div></div>
-      </div>
-      <div class="testi-card">
-        <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-        <p class="testi-quote">“Watching the traders work live changed everything for me. I can see exactly what they are doing, and why a trade was <em>not</em> taken.”</p>
-        <div class="testi-person"><span class="testi-avatar" style="background:#dbeafe;color:#1e40af">SM</span><div><b>Sarah Mitchell</b><span>Member • Houston, TX</span></div></div>
-      </div>
-      <div class="testi-card">
-        <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-        <p class="testi-quote">“I used to chase every candle myself. Now I let the traders wait for the wick. My account lasts longer — and I get my time back.”</p>
-        <div class="testi-person"><span class="testi-avatar" style="background:#dcfce7;color:#166534">DT</span><div><b>David Thompson</b><span>Member • Miami, FL</span></div></div>
-      </div>
-      <div class="testi-card">
-        <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-        <p class="testi-quote">“I came in knowing nothing about trading — and I did not need to. They trade for me, and I just watch the results come in.”</p>
-        <div class="testi-person"><span class="testi-avatar" style="background:#fce7f3;color:#9d174d">EC</span><div><b>Emily Carter</b><span>Member • Dallas, TX</span></div></div>
-      </div>
-    </div>
-
-<section style="padding-top:0">
-  <div class="wrap">
-    <p class="eyebrow">Is this for you?</p>
-    <h2>For people who want the profit — while our traders do the work.</h2>
-    <div class="for-grid" style="margin-top:14px">
-      <div class="for-col good"><h3><i class="bi bi-check-circle"></i> This is for you if…</h3><ul class="check-list"><li><i class="bi bi-check"></i><span>You want traders to trade for you, while you get on with your life.</span></li><li><i class="bi bi-check"></i><span>You want to see your trades live, in the open, every market day.</span></li><li><i class="bi bi-check"></i><span>You understand trading involves risk, and profits are never guaranteed.</span></li></ul></div>
-    </div>
-  </div>
-</section>
-
-<section class="join reveal" id="join">
-  <div class="wrap join-grid">
-    <div class="join-left">
-      <p class="eyebrow" style="color:#f0d47a">Join free</p>
-      <h2>Let our traders trade for you.</h2>
-      <p>Your spot is waiting. Leave your details now and we will get in touch to set up your account, so our traders can start trading for you — while you watch the results come in.</p>
-      <ul class="check-list">
-        <li><i class="bi bi-check-circle-fill"></i><span><strong>Free onboarding call:</strong> how trading for you works, in 15 minutes.</span></li>
-        <li><i class="bi bi-check-circle-fill"></i><span><strong>Live room invite:</strong> watch our traders trade live.</span></li>
-        <li><i class="bi bi-check-circle-fill"></i><span><strong>Account setup:</strong> we walk you through it, step by step.</span></li>
-      </ul>
-      <p class="small" style="color:#98a2b3;margin-top:14px"><i class="bi bi-lock"></i> Your details go only to Jason FX Academy, by email, to send your invite. We never sell your data.</p>
-    </div>
     <div class="form-card">
-      <h3>Get started free</h3>
-      <p class="small" style="margin:0 0 14px">Takes less than a minute. Fields marked * are required.</p>
+      <h3 style="text-align:center">Register free</h3>
+      <p class="small" style="text-align:center;margin:0 0 14px">Takes less than a minute. Spots are limited.</p>
       <form id="leadForm" novalidate>
         <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
         <div class="field"><label for="name">Full name *</label><input id="name" name="name" type="text" placeholder="e.g. Jason Miller" required autocomplete="name"></div>
@@ -221,27 +105,107 @@
         <div class="field"><label for="experience">Trading experience</label><select id="experience" name="experience"><option value="Beginner — never traded">Beginner — never traded</option><option value="Beginner — less than 1 year">Beginner — less than 1 year</option><option value="Intermediate — 1 to 3 years">Intermediate — 1 to 3 years</option><option value="Advanced — 3+ years">Advanced — 3+ years</option></select></div>
         <label class="consent"><input type="checkbox" required style="margin-top:3px"> I agree to be contacted by email / WhatsApp about trading for me and my live-room invite. *</label>
         <button id="submitBtn" class="btn btn-blue" type="submit" style="width:100%;justify-content:center;margin-top:14px"><i class="bi bi-send"></i> Reserve my spot</button>
-        <p class="small" style="text-align:center;margin:8px 0 0">No card required. Trading involves risk — no guaranteed profits.</p>
+        <p class="small" style="text-align:center;margin:8px 0 0">No card required. When our trades profit, you share in the profit — losses are possible, no profit is guaranteed.</p>
       </form>
       <div class="form-error" id="formError" role="alert"></div>
     </div>
   </div>
-  <div class="wrap"><p class="small" style="text-align:center;margin:18px 0 0;line-height:1.6">Trading involves substantial risk of loss. Past performance does not guarantee future results. Jason FX Academy trades on your behalf — profits are shared, losses are possible, and no profit is guaranteed. © <span id="year">2026</span> Jason FX Academy • jasonfxacademy.com</p></div>
 </section>
 
-<section id="faq" class="reveal" style="padding-top:0">
-  <div class="wrap" style="max-width:720px">
-    <p class="eyebrow" style="text-align:center">Support</p>
-    <h2 style="text-align:center">Questions, answered straight</h2>
-    <div class="faq-item open"><button class="faq-q" type="button">Is joining really free? <i class="bi bi-plus-lg"></i></button><div class="faq-a">Yes — registering and your onboarding call are free. No card is required.</div></div>
-    <div class="faq-item"><button class="faq-q" type="button">I have never traded before. Can I still join? <i class="bi bi-plus-lg"></i></button><div class="faq-a">Yes — that is the point. You do not need to trade at all. Our traders trade for you; you just watch and share in the profit.</div></div>
-    <div class="faq-item"><button class="faq-q" type="button">What markets does it work on? <i class="bi bi-plus-lg"></i></button><div class="faq-a">Forex pairs such as EURUSD and GBPUSD, gold (XAUUSD) and indices, using the Wick Theory.</div></div>
-    <div class="faq-item"><button class="faq-q" type="button">Is this financial advice? <i class="bi bi-plus-lg"></i></button><div class="faq-a">No. Jason FX Academy trades on your behalf. Nothing here is a recommendation to buy or sell any instrument, and trading involves substantial risk of loss.</div></div>
-    <div class="faq-item"><button class="faq-q" type="button">Do I get the profit? <i class="bi bi-plus-lg"></i></button><div class="faq-a">Yes — when our trades for you profit, you share in that profit. Profits are never guaranteed, and losses are possible.</div></div>
+<!-- 3 — HOW IT WORKS, THREE SMALL CARDS -->
+<section class="reveal" style="padding-bottom:8px">
+  <div class="wrap">
+    <p class="eyebrow" style="text-align:center">How it works</p>
+    <h2 style="text-align:center">You register. We trade. You profit.</h2>
+    <div class="steps">
+      <div class="step"><span class="step-num">1</span><h3>Register free</h3><p>Leave your details above. We vet your spot and get in touch.</p></div>
+      <div class="step"><span class="step-num">2</span><h3>Our traders trade for you</h3><p>Forex, gold and indices, using the Wick Theory — risk first, always.</p></div>
+      <div class="step"><span class="step-num">3</span><h3>You share in the profit</h3><p>When our trades for you profit, you share in that profit.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 — TESTIMONIALS, SWIPE -->
+<section class="reveal" style="padding-top:16px">
+  <div class="wrap">
+    <p class="eyebrow" style="text-align:center">What our members say</p>
+    <h2 style="text-align:center">Real members. Real profit. One method.</h2>
+    <p class="swipe-hint"><i class="bi bi-arrow-left-right"></i> Swipe to see more</p>
+    <div class="carousel">
+      <div class="carousel-track" id="testiTrack">
+        <div class="testi-card">
+          <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <p class="testi-quote">“I had blown two accounts trading on my own. Now Jason FX Academy trades for me — I do not stare at charts all day, and my account is finally growing.”</p>
+          <div class="testi-person"><span class="testi-avatar" style="background:#fef3c7;color:#92400e">MB</span><div><b>Marcus Bennett</b><span>Member • Atlanta, GA</span></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <p class="testi-quote">“Watching the traders work live changed everything for me. I can see exactly what they are doing, and why a trade was <em>not</em> taken.”</p>
+          <div class="testi-person"><span class="testi-avatar" style="background:#dbeafe;color:#1e40af">SM</span><div><b>Sarah Mitchell</b><span>Member • Houston, TX</span></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <p class="testi-quote">“I used to chase every candle myself. Now I let the traders wait for the wick. My account lasts longer — and I get my time back.”</p>
+          <div class="testi-person"><span class="testi-avatar" style="background:#dcfce7;color:#166534">DT</span><div><b>David Thompson</b><span>Member • Miami, FL</span></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <p class="testi-quote">“I came in knowing nothing about trading — and I did not need to. They trade for me, and I just watch the results come in.”</p>
+          <div class="testi-person"><span class="testi-avatar" style="background:#fce7f3;color:#9d174d">EC</span><div><b>Emily Carter</b><span>Member • Dallas, TX</span></div></div>
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-btn" id="testiPrev" type="button" aria-label="Previous testimonial"><i class="bi bi-arrow-left"></i></button>
+        <div class="carousel-dots" id="testiDots"></div>
+        <button class="carousel-btn" id="testiNext" type="button" aria-label="Next testimonial"><i class="bi bi-arrow-right"></i></button>
+      </div>
+    </div>
+    <div class="final-cta">
+      <a class="btn btn-blue" href="#join"><i class="bi bi-person-plus"></i> Register free — let us trade for me</a>
+    </div>
+    <p class="small" style="text-align:center;margin:18px 0 0;line-height:1.6">Trading involves substantial risk of loss. Past performance does not guarantee future results. Jason FX Academy trades on your behalf — profits are shared, losses are possible, and no profit is guaranteed. © <span id="year">2026</span> Jason FX Academy • jasonfxacademy.com</p>
   </div>
 </section>
 
 </main>
-<script src="assets/js/main.v4.js?v=4"></script>
+<script src="assets/js/main.v4.js?v=5"></script>
+<script>
+// Testimonial swipe carousel — scroll-snap + arrows + dots
+(function () {
+  var track = document.getElementById('testiTrack');
+  if (!track) return;
+  var cards = track.querySelectorAll('.testi-card');
+  var dotsWrap = document.getElementById('testiDots');
+  var dots = [];
+  cards.forEach(function (_, i) {
+    var d = document.createElement('button');
+    d.type = 'button';
+    d.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
+    d.addEventListener('click', function () { goTo(i); });
+    dotsWrap.appendChild(d);
+    dots.push(d);
+  });
+  function cardWidth() {
+    var c = cards[0];
+    return c ? c.offsetWidth + 12 : 300;
+  }
+  function current() {
+    return Math.round(track.scrollLeft / cardWidth());
+  }
+  function goTo(i) {
+    var n = cards.length;
+    i = Math.max(0, Math.min(n - 1, i));
+    track.scrollTo({ left: i * cardWidth(), behavior: 'smooth' });
+  }
+  function update() {
+    var i = current();
+    dots.forEach(function (d, j) { d.classList.toggle('active', j === i); });
+  }
+  document.getElementById('testiPrev').addEventListener('click', function () { goTo(current() - 1); });
+  document.getElementById('testiNext').addEventListener('click', function () { goTo(current() + 1); });
+  track.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
 </body>
 </html>
