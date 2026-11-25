@@ -1,4 +1,4 @@
-// Jason FX Academy v3 — reveal, counters, FAQ, lead form
+// Jason FX Academy v4 — reveal, counters, FAQ, lead form (FormSubmit -> onespiritgate@gmail.com)
 document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -104,7 +104,27 @@ document.addEventListener('DOMContentLoaded', () => {
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<i class="bi bi-arrow-repeat"></i> Sending your details…';
     try {
-      const res = await fetch('/api/lead', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+      // FormSubmit: no signup, no OAuth. First submission triggers an
+      // activation email to onespiritgate@gmail.com — click it once and
+      // every lead after that lands in that inbox.
+      const res = await fetch('https://formsubmit.co/ajax/onespiritgate@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          WhatsApp: data.whatsapp,
+          Experience: data.experience,
+          'Wants to trade': data.market,
+          Country: data.country,
+          Source: data.source,
+          _replyto: data.email,
+          _subject: 'New Jason FX Academy lead — ' + data.name,
+          _template: 'table',
+          _captcha: 'false',
+          _honey: data.website || ''
+        })
+      });
       const out = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(out.message || out.error || 'The form could not be sent.');
       if (successName) successName.textContent = data.name.split(' ')[0];
