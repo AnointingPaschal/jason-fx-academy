@@ -1,16 +1,17 @@
 # Gmail setup for Jason FX Academy leads
 
-## Current route — FormSubmit (live, 2026-11-25)
+## Current route — Gmail API on Cloudflare Pages (live, 2026-11-25)
 
-The form now posts to `https://formsubmit.co/ajax/onespiritgate@gmail.com`
-(see `assets/js/main.v4.js`). No signup, no OAuth, no Cloudflare variables.
+The form posts to `POST /api/lead` (`functions/api/lead.js`), which sends
+the lead via the Gmail API to onespiritgate@gmail.com. Credentials were set
+up on 2026-11-25 in Google Cloud project `jason-fx-academy` (Gmail API
+enabled, Web OAuth client, `gmail.send` scope) and added as Cloudflare Pages
+variables `GMAIL_CLIENT_ID`, `GMAIL_CLIENT_SECRET`, `GMAIL_REFRESH_TOKEN`,
+`LEAD_TO_EMAIL` (production + preview). The form in `main.v4.js` has a 15s
+timeout and redirects to `thank-you.html` on success.
 
-**One-time activation:** submit the form once on the live site. FormSubmit
-sends an activation email to onespiritgate@gmail.com — click the link in it
-once. Every lead after that lands straight in that inbox, subject
-`New Jason FX Academy lead — <name>`, with Reply-To set to the lead's email.
-
-The older routes below are kept as fallbacks only.
+FormSubmit was used briefly as a stopgap (its AJAX endpoint timed out and
+left the form stuck) and is no longer used.
 
 ## Older routes
 
