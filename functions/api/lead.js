@@ -78,37 +78,39 @@ export async function onRequestPost(context) {
   }
 
   const from = env.GMAIL_FROM || to;
-  const subject = `New Jason FX Academy lead — ${name}`;
-  const text = [
-    'New lead from jasonfxacademy.com',
-    '',
-    `Name: ${name}`,
-    `Email: ${email}`,
-    `WhatsApp: ${whatsapp || '—'}`,
-    `Telegram: ${telegram || '—'}`,
-    `Experience: ${experience || '—'}`,
-    `Wants to trade: ${market || '—'}`,
-    `Country: ${country || '—'}`,
-    `Source: ${body.source || 'Jason FX Academy landing page'}`,
-    `Time: ${new Date().toISOString()}`,
-    '',
-    `Reply to the lead at: ${email}`,
-  ].join('\n');
-
+  // Subject is plain ASCII only: a non-ASCII dash in the header came
+  // through as mojibake (aEUR") in Gmail, so no em dashes here.
+  const subject = `New lead: ${name} - Jason FX Academy`;
+  const row = (label, value) => `<tr><td style="padding:11px 14px;color:#667085;font-size:14px;border-bottom:1px solid #eaecf0;width:38%">${label}</td><td style="padding:11px 14px;color:#101828;font-size:14px;font-weight:500;border-bottom:1px solid #eaecf0">${value}</td></tr>`;
   const html = `
-    <h2 style="font-family:Roboto,Arial,sans-serif">New Jason FX Academy lead</h2>
-    <table style="font-family:Roboto,Arial,sans-serif;font-size:15px" cellpadding="6">
-      <tr><td><strong>Name</strong></td><td>${escapeHtml(name)}</td></tr>
-      <tr><td><strong>Email</strong></td><td><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></td></tr>
-      <tr><td><strong>WhatsApp</strong></td><td>${escapeHtml(whatsapp || '—')}</td></tr>
-      <tr><td><strong>Telegram</strong></td><td>${escapeHtml(telegram || '—')}</td></tr>
-      <tr><td><strong>Experience</strong></td><td>${escapeHtml(experience || '—')}</td></tr>
-      <tr><td><strong>Wants to trade</strong></td><td>${escapeHtml(market || '—')}</td></tr>
-      <tr><td><strong>Country</strong></td><td>${escapeHtml(country || '—')}</td></tr>
-      <tr><td><strong>Source</strong></td><td>${escapeHtml(body.source || 'Jason FX Academy landing page')}</td></tr>
-    </table>
-    <p style="font-family:Roboto,Arial,sans-serif;color:#666">Reply to this lead at ${escapeHtml(email)}.</p>
-  `;
+  <div style="font-family:Roboto,Arial,sans-serif;background:#f9fafb;padding:24px 12px">
+    <div style="max-width:560px;margin:0 auto;background:#ffffff;border-radius:16px;overflow:hidden;border:1px solid #eaecf0">
+      <div style="background:#101828;padding:24px 24px 20px;text-align:center">
+        <div style="display:inline-block;background:#d9a441;color:#101828;font-weight:900;font-size:22px;width:44px;height:44px;line-height:44px;border-radius:10px">J</div>
+        <div style="color:#ffffff;font-size:20px;font-weight:900;letter-spacing:.02em;margin-top:10px">JASON FX ACADEMY</div>
+        <div style="color:#d9a441;font-size:12px;letter-spacing:.18em;margin-top:4px">NEW LEAD &bull; THE WICK ROOM</div>
+      </div>
+      <div style="height:3px;background:linear-gradient(90deg,#d9a441,#f0d47a,#d9a441)"></div>
+      <div style="padding:24px">
+        <h2 style="margin:0 0 4px;font-size:20px;color:#101828">A new person wants us to trade for them</h2>
+        <p style="margin:0 0 18px;font-size:14px;color:#667085">Someone just registered on jasonfxacademy.com. Reach out fast while they are warm.</p>
+        <table style="width:100%;border-collapse:collapse;border:1px solid #eaecf0;border-radius:10px;overflow:hidden" cellpadding="0" cellspacing="0">
+          ${row('Full name', escapeHtml(name))}
+          ${row('Email', `<a href="mailto:${escapeHtml(email)}" style="color:#175cd3;text-decoration:none">${escapeHtml(email)}</a>`)}
+          ${row('WhatsApp', escapeHtml(whatsapp || 'Not given'))}
+          ${row('Telegram', escapeHtml(telegram || 'Not given'))}
+          ${row('Experience', escapeHtml(experience || 'Not given'))}
+          ${row('Country', escapeHtml(country || 'Not given'))}
+          ${row('Registered', new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }) + ' ET')}
+        </table>
+        <div style="text-align:center;margin-top:22px">
+          <a href="mailto:${escapeHtml(email)}" style="display:inline-block;background:#101828;color:#ffffff;text-decoration:none;font-weight:700;font-size:14px;padding:13px 28px;border-radius:999px">Reply to ${escapeHtml(name.split(' ')[0])}</a>
+        </div>
+        <p style="text-align:center;font-size:12px;color:#98a2b3;margin:16px 0 0">WhatsApp: ${escapeHtml(whatsapp || 'not given')} &nbsp;|&nbsp; Telegram: ${escapeHtml(telegram || 'not given')}</p>
+      </div>
+      <div style="background:#f9fafb;padding:14px 24px;text-align:center;font-size:11px;color:#98a2b3;border-top:1px solid #eaecf0">Jason FX Academy &bull; jasonfxacademy.com &bull; Trading involves risk. No guaranteed profits.</div>
+    </div>
+  </div>`;
 
   try {
     // 1. OAuth2: refresh token -> access token
