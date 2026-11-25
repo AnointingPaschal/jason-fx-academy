@@ -75,27 +75,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Lead form — native POST to FormSubmit (no AJAX fetch).
-  // The AJAX endpoint timed out and left the button stuck on
-  // "Sending your details…", so the form now submits normally:
-  // the browser posts to FormSubmit and lands on thank-you.html.
+  // Lead form — posts to the Cloudflare Pages Function /api/lead,
+  // which sends the lead via the Gmail API to onespiritgate@gmail.com.
+  // 15s timeout so the button can never hang on "Vetting you a spot…"
+  // the way the FormSubmit AJAX call did; on success go to thank-you.html.
   const form = document.getElementById('leadForm');
   if (!form) return;
   const errorBox = document.getElementById('formError');
   const submitBtn = document.getElementById('submitBtn');
-  form.addEventListener('submit', (e) => {
-    const name = (form.name.value || '').trim();
-    const email = (form.email.value || '').trim();
-    if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      e.preventDefault();
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errorBox.style.display = 'none';
+    const data = {
+      name: (form.name.value || '').trim(),
+      email: (form.email.value || '').trim(),
+      whatsapp: (form.whatsapp.value || '').trim(),
+      telegram: (form.telegram.value || '').trim(),
+      experience: form.experience.value,
+      country: (form.country.value || '').trim(),
+      source: 'jasonfxacademy.com — Wick Theory landing page',
+      website: form.website ? form.website.value : ''
+    };
+    if (!data.name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
       errorBox.textContent = 'Please add your full name and a valid email address.';
       errorBox.style.display = 'block';
       return;
     }
-    errorBox.style.display = 'none';
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<i class="bi bi-arrow-repeat"></i> Vetting you a spot…';
-    // Let the browser submit the form normally to FormSubmit,
-    // which redirects to thank-you.html.
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 15000);
+    try {
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+        signal: ctrl.signal
+      });
+      clearTimeout(timer);
+      const out = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(out.message || out.error || 'The form could not be sent.');
+      window.location.href = '/thank-you.html';
+    } catch (err) {
+      clearTimeout(timer);
+      errorBox.innerHTML = '<strong>Your details were not sent yet.</strong><br>' +
+        (err.name === 'AbortError' ? 'The connection timed out. Please try again.' : (err.message || 'Please try again in a moment.'));
+      errorBox.style.display = 'block';
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<i class="bi bi-send"></i> Reserve my spot';
+    }
   });
 });
