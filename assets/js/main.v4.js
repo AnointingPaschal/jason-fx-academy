@@ -1,4 +1,4 @@
-// Jason FX Academy v4 — reveal, counters, FAQ, lead form (FormSubmit -> onespiritgate@gmail.com)
+// Jason FX Academy v4 — reveal, counters, FAQ, lead form (FormSubmit -> Jasonaureyig1@gmail.com)
 document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Lead form — posts to the Cloudflare Pages Function /api/lead,
-  // which sends the lead via the Gmail API to onespiritgate@gmail.com.
+  // which sends the lead via the Gmail API to Jasonaureyig1@gmail.com.
   // 15s timeout so the button can never hang on "Vetting you a spot…"
   // the way the FormSubmit AJAX call did; on success go to thank-you.html.
   const form = document.getElementById('leadForm');
