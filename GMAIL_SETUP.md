@@ -3,7 +3,10 @@
 ## Current route — Gmail API on Cloudflare Pages (live, 2026-11-25)
 
 The form posts to `POST /api/lead` (`functions/api/lead.js`), which sends
-the lead via the Gmail API to onespiritgate@gmail.com. Credentials were set
+the lead via the Gmail API to Jasonaureyig1@gmail.com (changed 2026-11-25;
+previously onespiritgate@gmail.com). The email is still sent from
+onespiritgate@gmail.com (`GMAIL_FROM`), the Gmail account the OAuth
+credentials belong to. Credentials were set
 up on 2026-11-25 in Google Cloud project `jason-fx-academy` (Gmail API
 enabled, Web OAuth client, `gmail.send` scope) and added as Cloudflare Pages
 variables `GMAIL_CLIENT_ID`, `GMAIL_CLIENT_SECRET`, `GMAIL_REFRESH_TOKEN`,
