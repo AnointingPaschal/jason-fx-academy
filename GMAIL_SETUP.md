@@ -1,6 +1,20 @@
 # Gmail setup for Jason FX Academy leads
 
-The form on the landing page posts to `POST /api/lead`. That endpoint emails
+## Current route — FormSubmit (live, 2026-11-25)
+
+The form now posts to `https://formsubmit.co/ajax/onespiritgate@gmail.com`
+(see `assets/js/main.v4.js`). No signup, no OAuth, no Cloudflare variables.
+
+**One-time activation:** submit the form once on the live site. FormSubmit
+sends an activation email to onespiritgate@gmail.com — click the link in it
+once. Every lead after that lands straight in that inbox, subject
+`New Jason FX Academy lead — <name>`, with Reply-To set to the lead's email.
+
+The older routes below are kept as fallbacks only.
+
+## Older routes
+
+The form used to post to `POST /api/lead`. That endpoint emails
 every lead to you through Gmail. There are two routes — pick the one that
 matches where the site is hosted.
 
