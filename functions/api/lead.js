@@ -98,7 +98,7 @@ export async function onRequestPost(context) {
           ${row('Full name', escapeHtml(name))}
           ${row('Email', `<a href="mailto:${escapeHtml(email)}" style="color:#175cd3;text-decoration:none">${escapeHtml(email)}</a>`)}
           ${row('WhatsApp', escapeHtml(whatsapp || 'Not given'))}
-          ${row('Telegram', escapeHtml(telegram || 'Not given'))}
+          ${row('Telegram username or number', escapeHtml(telegram || 'Not given'))}
           ${row('Experience', escapeHtml(experience || 'Not given'))}
           ${row('Country', escapeHtml(country || 'Not given'))}
           ${row('Registered', new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }) + ' ET')}
