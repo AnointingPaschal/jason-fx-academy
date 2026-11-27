@@ -88,12 +88,12 @@ export async function onRequestPost(context) {
       <div style="background:#101828;padding:24px 24px 20px;text-align:center">
         <div style="display:inline-block;background:#d9a441;color:#101828;font-weight:900;font-size:22px;width:44px;height:44px;line-height:44px;border-radius:10px">J</div>
         <div style="color:#ffffff;font-size:20px;font-weight:900;letter-spacing:.02em;margin-top:10px">JASON FX ACADEMY</div>
-        <div style="color:#d9a441;font-size:12px;letter-spacing:.18em;margin-top:4px">NEW LEAD &bull; THE WICK ROOM</div>
+        <div style="color:#d9a441;font-size:12px;letter-spacing:.18em;margin-top:4px">NEW LEAD &bull; MENTORSHIP</div>
       </div>
       <div style="height:3px;background:linear-gradient(90deg,#d9a441,#f0d47a,#d9a441)"></div>
       <div style="padding:24px">
-        <h2 style="margin:0 0 4px;font-size:20px;color:#101828">A new person wants us to trade for them</h2>
-        <p style="margin:0 0 18px;font-size:14px;color:#667085">Someone just registered on jasonfxacademy.com. Reach out fast while they are warm.</p>
+        <h2 style="margin:0 0 4px;font-size:20px;color:#101828">A new person enrolled in the mentorship</h2>
+        <p style="margin:0 0 18px;font-size:14px;color:#667085">Someone just enrolled on jasonfxacademy.com. Reach out fast while they are warm.</p>
         <table style="width:100%;border-collapse:collapse;border:1px solid #eaecf0;border-radius:10px;overflow:hidden" cellpadding="0" cellspacing="0">
           ${row('Full name', escapeHtml(name))}
           ${row('Email', `<a href="mailto:${escapeHtml(email)}" style="color:#175cd3;text-decoration:none">${escapeHtml(email)}</a>`)}
