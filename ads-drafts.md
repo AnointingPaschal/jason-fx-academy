@@ -13,8 +13,8 @@
 ## Ad 1 — Video-first (best bet)
 
 - **Creative:** the Wick Theory film clip (same video as the landing-page hero), 9:16 or 1:1.
-- **Primary text:** Imagine waking up to trades already working for you. You register. Our traders trade for you. Register free.
-- **Headline:** You register. We trade for you.
+- **Primary text:** Learn to understand the forex market. Discover market analysis, trading strategies, price action and risk management through structured forex education and mentorship. Enrol free.
+- **Headline:** Learn Forex Trading With Mentorship
 - **Description:** Free registration · Our traders trade for you
 - **CTA button:** Sign Up (links to https://jasonfxacademy.com/)
 - **Risk line (in the ad or landing page footer):** Trading involves substantial risk of loss.
@@ -22,9 +22,9 @@
 ## Ad 2 — How it works
 
 - **Creative:** single image or 3-card carousel, navy + gold, matching the site.
-- **Primary text:** Register free, get set up, and our traders trade for you — when our trades make a profit, you share in that profit.
-- **Headline:** Register free. We trade for you.
-- **Description:** 1. Register · 2. Get set up · 3. Our traders trade for you
+- **Primary text:** Enrol free and learn the methodology — market structure, price action and risk management, through structured forex education.
+- **Headline:** Enrol Free. Learn To Trade.
+- **Description:** 1. Enrol · 2. Learn the methodology · 3. Develop your skills
 - **CTA button:** Sign Up (links to https://jasonfxacademy.com/)
 
 ## Ad 3 — Member stories — PAUSED, do not use yet
@@ -42,20 +42,20 @@
 
 ## Google Ads — compliant headlines (for the responsive search ad)
 
-Google flagged the ad for "Destination not working" and "Unreliable claims". Use **https://jasonfxacademy.com/** as the Final URL, never http://. Use only these headlines — no profit promises, no "guaranteed", no "limited spots", no fake testimonials:
+Google flagged the ad for "Destination not working" and "Unreliable claims". Use **https://jasonfxacademy.com/** as the Final URL, never http://. The site now presents Jason FX Academy as forex education and mentorship (Dami's rewrite, 2026-11-27) — use only these headlines, no "we trade for you", no profit promises, no "guaranteed", no "limited spots", no fake testimonials:
 
-1. You Register. We Trade For You.
-2. Register Free — No Card Required
-3. Our Traders Trade Forex & Gold
-4. Watch The Wick Theory Video
-5. Managed Trading — We Trade For You
-6. Learn The Wick Theory Method
-7. Forex, Gold & Indices Trading
-8. Register Free Today
-9. We Trade. You Watch Live.
-10. Jason FX Academy — Join Free
-11. Trading With Risk Managed First
+1. Learn Forex Trading With Mentorship
+2. Structured Forex Education
+3. Learn Price Action & Risk Management
+4. Understand The Wick Theory
+5. Forex Mentorship — Enrol Free
+6. Learn Market Structure & Analysis
+7. Trading Strategies & Price Action
+8. Enrol Free — No Card Required
+9. Learn To Understand The Forex Market
+10. Jason FX Academy — Enrol Free
+11. Professional Forex Mentorship
 
 Descriptions (keep the risk line in at least one):
-- "Register free and let our traders trade for you. Trading involves substantial risk of loss."
-- "Watch the Wick Theory video, register free, and get set up. No card required."
+- "Enrol free and learn forex trading with structured professional mentorship. Trading involves substantial risk of loss."
+- "Learn market analysis, trading strategies, price action and risk management. Watch the Wick Theory video."
