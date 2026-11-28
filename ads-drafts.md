@@ -1,6 +1,6 @@
 # Jason FX Academy — Facebook & Instagram ad drafts (ready for approval)
 
-**Landing page:** https://jasonfxacademy.com/ — "You do not trade. We trade for you."
+**Landing page:** https://jasonfxacademy.com/ — "Learn Forex Trading With Structured Professional Mentorship."
 **Campaign type:** Leads, pointing to the landing-page form (video first, form next). Testimonials were removed from the site on 2026-11-27 after Google Ads flagged them as unreliable claims — do not use member-story ads until real testimonials with permission exist.
 **Status:** copy drafted, NOT created in Ads Manager. Still needed before anything goes live: confirm it is Jason FX Academy, the Facebook Page + Instagram account to run from, daily budget, countries, and start date (or create paused).
 
@@ -15,7 +15,7 @@
 - **Creative:** the Wick Theory film clip (same video as the landing-page hero), 9:16 or 1:1.
 - **Primary text:** Learn to understand the forex market. Discover market analysis, trading strategies, price action and risk management through structured forex education and mentorship. Enrol free.
 - **Headline:** Learn Forex Trading With Mentorship
-- **Description:** Free registration · Our traders trade for you
+- **Description:** Free registration · Structured forex education & mentorship
 - **CTA button:** Sign Up (links to https://jasonfxacademy.com/)
 - **Risk line (in the ad or landing page footer):** Trading involves substantial risk of loss.
 
@@ -38,7 +38,7 @@
 - **Targeting:** broad — interests in trading/forex only, no narrow demographics.
 - **Budget:** to be set by Anointing (suggest starting small, e.g. $10–20/day, and scaling the best-performing ad).
 - **Start:** create paused for approval, launch when he says go.
-- **Measurement:** leads via the landing-page form, which already delivers to Jasonaureyig1@gmail.com.
+- **Measurement:** leads via the landing-page form, which already delivers to amainjason1@gmail.com.
 
 ## Google Ads — compliant headlines (for the responsive search ad)
 
