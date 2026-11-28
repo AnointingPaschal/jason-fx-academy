@@ -20,6 +20,20 @@ var e=ttq._i[t]=[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]
 }(window, document, 'ttq');
 </script>
 <!-- TikTok Pixel Code End -->
+<script>
+  // Fires once, only on this page — and this page only loads after a
+  // successful enrolment, so CompleteRegistration is never double-counted
+  // and never fires for a failed form submit.
+  if (window.ttq) {
+    ttq.track('CompleteRegistration', {
+      contents: [{
+        content_id: 'jason-fx-academy-mentorship',
+        content_type: 'product',
+        content_name: 'Jason FX Academy Mentorship'
+      }]
+    });
+  }
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Registration successful — Jason FX Academy</title>
